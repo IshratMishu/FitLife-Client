@@ -7,11 +7,9 @@ import Footer from "../components/Footer/Footer";
 const Root = () => {
     return (
         <div className='font-poppins'>
-            <div className="max-w-6xl mx-auto">
-                <Navbar></Navbar>
-                <ToastContainer />
-                <Outlet></Outlet>
-            </div>
+            <Navbar></Navbar>
+            <ToastContainer />
+            <Outlet></Outlet>
             <Footer></Footer>
         </div>
     );

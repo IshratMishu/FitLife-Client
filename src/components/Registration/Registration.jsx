@@ -5,10 +5,12 @@ import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
 import useAuth from "../../components/Hooks/useAuth";
 import Swal from 'sweetalert2'
-
+import { FaGoogle } from "react-icons/fa";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Registration = () => {
-    const { createUser, updateUserProfile, setReload } = useAuth();
+    const { createUser, updateUserProfile, setReload, googleLogin  } = useAuth();
     const [passwordError, setPasswordError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
 
@@ -18,7 +20,7 @@ const Registration = () => {
         handleSubmit,
         formState: { errors },
     } = useForm();
-
+    const from = location?.state || "/";
 
     const onSubmit = (data) => {
         const { email, password, name, photo } = data;
@@ -42,16 +44,34 @@ const Registration = () => {
                 updateUserProfile(name, photo)
                     .then(() => {
                         setReload(true);
-                        navigate("/");
+                        navigate(from);
                     });
             });
     };
 
+    const handleSocialLogin = socialLoginProvider => {
+        socialLoginProvider()
+            .then(result => {
+                if (result.user) {
+                    toast.success('Login Successful!', {
+                        autoClose: 2000
+                    });
+                    navigate(from);
+                }
+            })
+    }
+
 
     return (
         <div className="hero min-h-screen bg-base-100 mt-28 mb-14">
-
             <div className="hero-content flex flex-col">
+
+            <div className="flex items-center gap-10 justify-center border bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]"
+                        onClick={() => handleSocialLogin(googleLogin)}>
+                        <FaGoogle />
+                        <p>Continue With Google</p>
+                    </div>
+                    
                 <div className="text-center">
                     <h1 className="text-3xl font-bold text-[#81c784]">Register for Free!</h1>
                 </div>
