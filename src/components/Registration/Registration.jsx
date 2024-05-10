@@ -123,7 +123,7 @@ const Registration = () => {
                 <div className="flex items-center gap-5 justify-center border bg-[#495E57] py-2 px-3 rounded text-white font-semibold hover:bg-[#F4CE14] w-auto md:w-1/2"
                     onClick={() => handleSocialLogin(googleLogin)}>
                     <FaGoogle />
-                    <p>Continue With Google</p>
+                    <p>Register With Google</p>
                 </div>
             </div>
         </div>

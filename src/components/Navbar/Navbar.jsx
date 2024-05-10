@@ -17,7 +17,7 @@ const Navbar = () => {
 
     const links = <>
         <li><NavLink to='/' style={linkStyle}>Home</NavLink></li>
-        <li><NavLink to='/s' style={linkStyle}>Services</NavLink></li>
+        <li><NavLink to='/allService' style={linkStyle}>Services</NavLink></li>
         <li>
             <details>
                 <summary>
@@ -35,7 +35,7 @@ const Navbar = () => {
 
     const link2 = <>
         <li><NavLink to='/' style={linkStyle}>Home</NavLink></li>
-        <li><NavLink to='/' style={linkStyle}>Services</NavLink></li>
+        <li><NavLink to='/allService' style={linkStyle}>Services</NavLink></li>
     </>
 
 
