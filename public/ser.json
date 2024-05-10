@@ -3,10 +3,8 @@
     "service_image": "https://i.ibb.co/3TxgX6H/pexels-yankrukov-8436612.jpg",
     "service_name": "Yoga Classes",
     "service_description": "Improve flexibility and reduce stress with our yoga classes.",
-    "service_provider": {
-      "image": "https://i.ibb.co/T2X8zB6/service1.jpg",
-      "name": "Emily Johnson"
-    },
+    "image": "https://i.ibb.co/T2X8zB6/service1.jpg",
+    "name": "Emily Johnson",
     "service_area": "Downtown",
     "service_price": "$20"
   },
@@ -14,10 +12,8 @@
     "service_image": "https://i.ibb.co/kVTjR2g/massage.jpg",
     "service_name": "Deep Tissue Massage",
     "service_description": "Relieve muscle tension and improve circulation with deep tissue massage.",
-    "service_provider": {
-      "image": "https://i.ibb.co/P9N7Mt1/service2.jpg",
-      "name": "Michael Davis"
-    },
+    "image": "https://i.ibb.co/P9N7Mt1/service2.jpg",
+    "name": "Michael Davis",
     "service_area": "Midtown",
     "service_price": "$60"
   },
@@ -25,10 +21,8 @@
     "service_image": "https://i.ibb.co/61s3MH9/training.jpg",
     "service_name": "Personal Training",
     "service_description": "Get personalized workout plans and guidance from certified trainers.",
-    "service_provider": {
-      "image": "https://i.ibb.co/MPmfpPd/service3.jpg",
-      "name": "David Brown"
-    },
+    "image": "https://i.ibb.co/MPmfpPd/service3.jpg",
+    "name": "David Brown",
     "service_area": "Suburbs",
     "service_price": "$50"
   },
@@ -36,10 +30,8 @@
     "service_image": "https://i.ibb.co/KzfYm9j/nutrition.jpg",
     "service_name": "Nutrition Counseling",
     "service_description": "Get personalized nutrition plans and advice from certified dietitians.",
-    "service_provider": {
-      "image": "https://i.ibb.co/8sbrxkr/4.jpg",
-      "name": "Mark Davis"
-    },
+    "image": "https://i.ibb.co/8sbrxkr/4.jpg",
+    "name": "Mark Davis",
     "service_area": "West End",
     "service_price": "$80"
   },
@@ -47,10 +39,8 @@
     "service_image": "https://i.ibb.co/Qj29z6Y/physical.jpg",
     "service_name": "Physical Therapy Sessions",
     "service_description": "Recover from injuries and improve mobility with personalized physical therapy.",
-    "service_provider": {
-      "image": "https://i.ibb.co/rfHZdt2/5.jpg",
-      "name": "Samantha Smith"
-    },
+    "image": "https://i.ibb.co/rfHZdt2/5.jpg",
+    "name": "Samantha Smith",
     "service_area": "Downtown",
     "service_price": "$90",
     "duration": "1 hour session",
@@ -65,10 +55,8 @@
     "service_image": "https://i.ibb.co/9vpbk7Q/session.jpg",
     "service_name": "Acupuncture Sessions",
     "service_description": "Balance your body's energy and promote healing with acupuncture.",
-    "service_provider": {
-      "image": "https://i.ibb.co/42Ks3Gf/6.jpg",
-      "name": "James Rodriguez"
-    },
+    "image": "https://i.ibb.co/42Ks3Gf/6.jpg",
+    "name": "James Rodriguez",
     "service_area": "Suburbs",
     "service_price": "$65",
     "duration": "45 minutes session",
@@ -83,10 +71,8 @@
     "service_image": "https://i.ibb.co/CtHrR6c/boxing.jpg",
     "service_name": "Boxing Fitness Classes",
     "service_description": "Get in shape and build strength with high-intensity boxing workouts.",
-    "service_provider": {
-      "image": "https://i.ibb.co/jW7g5b3/7.jpg",
-      "name": "Daniel Evans"
-    },
+    "image": "https://i.ibb.co/jW7g5b3/7.jpg",
+    "name": "Daniel Evans",
     "service_area": "City Center",
     "service_price": "$30"
   },
@@ -94,10 +80,8 @@
     "service_image": "https://i.ibb.co/9bSSVCG/cycle.jpg",
     "service_name": "Cycling Studio Membership",
     "service_description": "Burn calories and boost endurance with indoor cycling classes.",
-    "service_provider": {
-      "image": "https://i.ibb.co/FnpGRpS/8.jpg",
-      "name": "Adam Walker"
-    },
+    "image": "https://i.ibb.co/FnpGRpS/8.jpg",
+    "name": "Adam Walker",
     "service_area": "Downtown",
     "service_price": "$40/month"
   },
@@ -105,10 +89,8 @@
     "service_image": "https://i.ibb.co/Wsssq3N/outdoor.jpg",
     "service_name": "Outdoor Bootcamp Workouts",
     "service_description": "Challenge yourself with outdoor bootcamp sessions for a full-body workout.",
-    "service_provider": {
-      "image": "https://i.ibb.co/XpbjSxB/9.jpg",
-      "name": "John Doe"
-    },
+    "image": "https://i.ibb.co/XpbjSxB/9.jpg",
+    "name": "John Doe",
     "service_area": "Park District",
     "service_price": "$25"
   },
@@ -116,10 +98,8 @@
     "service_image": "https://i.ibb.co/yF6ZysQ/swim.jpg",
     "service_name": "Swimming Lessons",
     "service_description": "Learn proper swimming techniques and improve your skills with our expert instructors.",
-    "service_provider": {
-      "image": "https://i.ibb.co/ZHFqyqq/10.jpg",
-      "name": "Mark Davis"
-    },
+    "image": "https://i.ibb.co/ZHFqyqq/10.jpg",
+    "name": "Mark Davis",
     "service_area": "Suburbs",
     "service_price": "$50/hour"
   }
