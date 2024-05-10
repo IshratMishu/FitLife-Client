@@ -5,6 +5,8 @@ import { useState } from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useAuth from "../../components/Hooks/useAuth";
+import loginLogo from '../../assets/pexels-cliff-booth-4058411.jpg';
+
 
 const Login = () => {
     const { signInUser, googleLogin } = useAuth();
@@ -57,49 +59,46 @@ const Login = () => {
 
 
     return (
-        <div className="hero min-h-screen bg-base-100 mt-28 mb-14">
-            <div className="hero-content flex flex-col">
-                <div className="text-center">
-                    <h1 className="text-3xl font-bold text-[#81c784]">Great to have you back!</h1>
-
-                    <div className="flex items-center gap-10 justify-center border bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]"
-                        onClick={() => handleSocialLogin(googleLogin)}>
-                        <FaGoogle />
-                        <p>Continue With Google</p>
-                    </div>
-                </div>
-
-                <div className="divider">or</div>
-
-                <div className="card shrink-0 w-full max-w-sm shadow-md shadow-gray-400 bg-[#81c784]">
+        <div className="hero min-h-screen mt-20 mb-14" style={{ backgroundImage: `url(${loginLogo})` }}>
+            <div className="hero-content w-full flex flex-col bg-[#495E57] bg-opacity-55">
+                <h1 className="text-3xl font-bold text-white text-center">Welcome Back!</h1>
+                <div className="card  bg-[#495E57] bg-opacity-40 w-full max-w-sm shadow-md shadow-gray-400">
                     <form className="card-body" onSubmit={handleSubmit(onLogin)}>
                         <div className="form-control">
                             <label className="label">
-                                <span className="text-black">Email</span>
+                                <span className="text-white">Email</span>
                             </label>
                             <input type="email" placeholder="email" className="input input-bordered" {...register("email", { required: true })} />
-                            {errors.email && <span className="text-[#FF497C]">This field is required</span>}
+                            {errors.email && <span className="text-red-700">This field is required</span>}
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="text-black">Password</span>
+                                <span className="text-white">Password</span>
                             </label>
                             <input type="password" placeholder="password" className="input input-bordered" {...register("password", { required: true })} />
-                            {errors.password && <span className="text-[#FF497C]">This field is required</span>}
+                            {errors.password && <span className="text-red-700">This field is required</span>}
                             <label className="label">
-                                <a href="#" className="text-black link link-hover">Forgot password?</a>
+                                <a href="#" className="text-white link link-hover">Forgot password?</a>
                             </label>
                         </div>
-                        <div className="form-control mt-6">
-                            <button onClick={() => handleSocialLogin} className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]" >Login</button>
+                        <div className="form-control">
+                            <button onClick={() => handleSocialLogin} className="bg-[#495E57] py-2  px-3 rounded text-white font-semibold hover:bg-[#F4CE14] border" >Login</button>
                         </div>
                         {
-                            credentials && <small className="text-[#FF497C]">{credentials}</small>
+                            credentials && <small className="text-red-700">{credentials}</small>
                         }
                         <div className="card-text">
-                            <p className="text-black">New here? <Link to="/registration"><button className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#988087]">Create an Account</button></Link></p>
+                            <p className="text-white">New here? <Link to="/registration"><button className="bg-[#495E57] md:mt-4 px-3 rounded text-white text-sm md:text-base md:font-semibold hover:bg-[#F4CE14] border">Create an Account</button></Link></p>
                         </div>
                     </form>
+                </div>
+
+                <div className="divider text-white">or</div>
+
+                <div className="flex items-center gap-5 justify-center border bg-[#495E57] py-2 px-3 rounded text-white font-semibold hover:bg-[#F4CE14] w-auto md:w-1/2"
+                    onClick={() => handleSocialLogin(googleLogin)}>
+                    <FaGoogle />
+                    <p>Continue With Google</p>
                 </div>
             </div>
         </div>
