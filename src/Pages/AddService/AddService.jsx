@@ -126,7 +126,7 @@ const AddService = () => {
                         <input type="text" name="photo" className="grow" placeholder="your photo" defaultValue={user.photoURL} disabled/>
                     </label>
                 </div>
-                <input type="submit" value="Add" className="bg-[#495E57] btn btn-block py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#F4CE14]" />
+                <input type="submit" value="Add & Publish" className="bg-[#495E57] btn btn-block py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#F4CE14]" />
             </form>
         </div>
     </div>
