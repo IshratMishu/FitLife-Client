@@ -105,7 +105,7 @@ const AddService = () => {
                             <span className="label-text font-bold">User Email</span>
                         </label>
                         <label className="input input-bordered flex items-center gap-2">
-                            <input type="text" name="email" className="grow" placeholder="email" defaultValue={user.email} disabled/>
+                            <input type="text" name="email" className="grow" placeholder="email" defaultValue={user?.email} disabled/>
                         </label>
                     </div>
                     <div className="form-control md:w-1/2">
@@ -113,7 +113,7 @@ const AddService = () => {
                             <span className="label-text font-bold">User Name</span>
                         </label>
                         <label className="input input-bordered flex items-center gap-2">
-                            <input type="text" name="name" className="grow" placeholder="name" defaultValue={user.displayName} disabled/>
+                            <input type="text" name="name" className="grow" placeholder="name" defaultValue={user?.displayName} disabled/>
                         </label>
                     </div>
                 </div>
@@ -123,7 +123,7 @@ const AddService = () => {
                         <span className="label-text font-bold">User Photo</span>
                     </label>
                     <label className="input input-bordered flex items-center gap-2">
-                        <input type="text" name="photo" className="grow" placeholder="your photo" defaultValue={user.photoURL} disabled/>
+                        <input type="text" name="photo" className="grow" placeholder="your photo" defaultValue={user?.photoURL} disabled/>
                     </label>
                 </div>
                 <input type="submit" value="Add & Publish" className="bg-[#495E57] btn btn-block py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#F4CE14]" />

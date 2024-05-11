@@ -5,7 +5,7 @@ import logo from '../../assets/Blue_Modern_Domain_Registrar_Business_Company_Log
 
 const Footer = () => {
     return (
-        <footer className="p-10 text-base-content font-poppins mt-28">
+        <footer className="p-10 text-base-content font-poppins mt-28 border-t">
             <div className="footer md:flex md:justify-between max-w-6xl mx-auto">
                 <aside>
                     <img className="h-16" src={logo} alt="" />
