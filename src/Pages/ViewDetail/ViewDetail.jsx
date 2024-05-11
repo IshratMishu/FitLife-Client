@@ -38,7 +38,7 @@ const ViewDetail = () => {
                         <p>{fit.name}</p>
                     </div>
                     <p className='flex items-center gap-1 justify-center'><IoIosPricetags /> <span className='font-semibold'>Price:</span> {fit.service_price}</p>
-                    <Link className="flex justify-center" to='/'><button className="bg-[#495E57] py-2 px-3 mt-5 rounded text-[#F5F7F8] font-semibold hover:bg-[#F4CE14]">Book Now</button></Link>
+                    <Link className="flex justify-center" to={`/bookNow/${fit._id}`}><button className="bg-[#495E57] py-2 px-3 mt-5 rounded text-[#F5F7F8] font-semibold hover:bg-[#F4CE14]">Book Now</button></Link>
                 </div>
             </div>
         </div>

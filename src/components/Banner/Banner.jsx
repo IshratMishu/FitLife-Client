@@ -15,7 +15,7 @@ const Banner = () => {
                             Your Journey to Optimal Health Starts Here
                             </p>
                             <div className="flex justify-center">
-                                <Link to='/allCraftItem'><button className="bg-[#495E57] py-2 mt-5 px-3 rounded text-[#F5F7F8] font-semibold hover:bg-[#F4CE14]">Browse Here</button></Link>
+                                <Link to='/'><button className="bg-[#495E57] py-2 mt-5 px-3 rounded text-[#F5F7F8] font-semibold hover:bg-[#F4CE14]">Book Now</button></Link>
                             </div>
                         </div>              
             </Swiper>

@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../components/Hooks/useAuth";
-import logo from '../../assets/Blue_Modern_Domain_Registrar_Business_Company_Logo-removebg-preview.png'
+import logo from '../../assets/Blue_Modern_Domain_Registrar_Business_Company_Logo-removebg-preview.png';
 
 const Navbar = () => {
     const { logOut, user } = useAuth();
@@ -25,8 +25,8 @@ const Navbar = () => {
                 </summary>
                 <ul className="p-2 bg-base-100 rounded-t-none">
                     <li><NavLink to='/addService' style={linkStyle}>Add Service</NavLink></li>
-                    <li><NavLink to='/' style={linkStyle}>Manage Service</NavLink></li>
-                    <li><NavLink to='/' style={linkStyle}>Booked-Services</NavLink></li>
+                    <li><NavLink to='/manageService' style={linkStyle}>Manage Service</NavLink></li>
+                    <li><NavLink to='/bookedService' style={linkStyle}>Booked-Services</NavLink></li>
                     <li><NavLink to='/' style={linkStyle}>Service-To-Do</NavLink></li>
                 </ul>
             </details>
@@ -39,8 +39,10 @@ const Navbar = () => {
     </>
 
 
+
+
     return (
-        <div className="navbar bg-base-100 fixed top-0 left-0 w-full z-10 p-2 ">
+          <div className="navbar fixed bg-base-100 left-0 top-0 z-10 p-2">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

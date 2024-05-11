@@ -7,7 +7,7 @@ import Footer from "../components/Footer/Footer";
 const Root = () => {
     return (
         <div className='font-poppins'>
-            <Navbar></Navbar>
+           <Navbar></Navbar>
             <ToastContainer />
             <ScrollRestoration/>
             <Outlet></Outlet>

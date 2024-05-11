@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-5 max-w-screen-xl mx-auto">
                {
                fitServices.slice(0, 6).map(oneService => <ServiceData key={oneService._id} oneService={oneService}></ServiceData>)
                 }
