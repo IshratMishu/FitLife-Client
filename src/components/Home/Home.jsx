@@ -1,7 +1,9 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import ServiceData from "./ServiceData/ServiceData";
-import Advantages from "../../Sections/Advantages"
+import Advantages from "../../Sections/Advantages";
+import Course from "../../Sections/Course";
+import Reviews from "../../Sections/Reviews"
 
 const Home = () => {
     const fitServices = useLoaderData();
@@ -18,7 +20,9 @@ const Home = () => {
                 <Link to='/allService'><button className="bg-[#495E57] py-2 px-3 rounded text-[#F5F7F8] font-semibold hover:bg-[#F4CE14]">Show All</button></Link>
             </div>
 
+<Reviews></Reviews>
             <Advantages></Advantages>
+            <Course></Course>
         </div>
     );
 };
