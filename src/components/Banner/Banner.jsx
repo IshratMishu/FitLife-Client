@@ -5,13 +5,13 @@ import video33 from '../../assets/7877154-uhd_4096_2160_25fps.mp4';
 
 const Banner = () => {
     return (
-        <div className="relative lg:h-[600px] mt-16 text-white">
+        <div className="relative h-[350px] md:h-[600px] mt-16 text-white">
             <video autoPlay loop muted className="absolute object-cover w-full h-full">
                 <source src={video33} type="video/mp4"/>
             </video>
             <Swiper className="mySwiper">
-                        <div className="p-2 md:p-36 mx-auto lg:mx-16">
-                            <p className="text-[30px] lg:text-[40px] md:text-[32px] font-bold text-center">
+                        <div className="p-10 md:p-36 mx-auto lg:mx-16">
+                            <p className="text-[20px] lg:text-[40px] md:text-[32px] font-bold text-center">
                             Your Journey to Optimal Health Starts Here
                             </p>
                             <div className="flex justify-center">

@@ -16,8 +16,8 @@ const Home = () => {
                fitServices.slice(0, 6).map(oneService => <ServiceData key={oneService._id} oneService={oneService}></ServiceData>)
                 }
             </div>
-            <div className="text-center">
-                <Link to='/allService'><button className="bg-[#495E57] py-2 px-3 rounded text-[#F5F7F8] font-semibold hover:bg-[#F4CE14]">Show All</button></Link>
+            <div className="text-center mt-5">
+                <Link to='/allService'><button className="bg-[#495E57] py-2 px-5 rounded text-[#F5F7F8] font-semibold hover:bg-[#F4CE14] shadow-xl">Show All</button></Link>
             </div>
 
 <Reviews></Reviews>
