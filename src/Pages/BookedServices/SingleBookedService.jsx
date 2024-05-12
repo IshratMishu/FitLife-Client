@@ -1,34 +1,43 @@
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
-const SingleBookedService = ({singleBooked}) => {
 
-    const { serviceId, service_name, service_image, service_price, user_email, user_name, instructions, date, providerName, providerEmail, status } = singleBooked;
+const SingleBookedService = ({ singleBooked }) => {
+
+    const { serviceId, service_name, service_image, service_price, user_email, user_name, date, providerName, providerEmail, status } = singleBooked;
 
 
     return (
-        <div>
-             <Helmet>
+        <div className='mt-5 max-w-screen-lg mx-auto'>
+            <Helmet>
                 <title>Booked Services - FlexiCare</title>
             </Helmet>
-            <div className="card md:card-side bg-base-100 shadow-xl lg:m-5 m-2">
-                <figure className="lg:p-10 p-2">
-                    <img className="rounded-xl h-52" src={service_image} alt="fitness" />
-                    </figure>
-                <div className="card-body">
-                    <h2 className="card-title">{service_name}</h2>
-                    <p>{serviceId}</p>
-                    <div className='flex items-center gap-2'>
-                        <p>{providerName}</p>
-                        <p>{providerEmail}</p>
+
+            <div className="shadow-md rounded-xl m-3 p-5">
+                <div className="flex flex-col md:flex-row items-center gap-5">
+                    <div>
+                        <img className="rounded-xl h-40 object-cover" src={service_image} alt="" />
                     </div>
-                  <p>{service_price}</p>
-                  <p>{ user_email}</p>
-                  <p>{ user_name}</p>
-                  <p>{instructions.address}</p>
-                  <p>{instructions.plan}</p>
-                  <p>{date}</p>
-                  <p>{status}</p>
+                    <div className='space-y-2'>
+                        <p className="text-sm"><span className='font-medium'>Service-Id: </span> {serviceId}</p>
+                        <h1 className="text-sm"><span className='font-medium'>Service Name: </span>{service_name}</h1>
+                        <p className="text-sm"><span className='font-medium'>Price: </span>{service_price}</p>
+                        <div className='mt-2'>
+                            <h1 className='font-medium'>Provider Info:</h1>
+                            <p className="text-sm"><span className='font-medium'>Name: </span>{providerName}</p>
+                            <p className="text-sm"><span className='font-medium'>Email: </span>{providerEmail}</p>
+                        </div>
+                        
+                        <div className='mt-2'>
+                            <h1 className='font-medium'>User Info:</h1>
+                            <p className="text-sm"><span className='font-medium'>Name: </span>{user_name}</p>
+                            <p className="text-sm"><span className='font-medium'>Email: </span>{user_email}</p>
+                        </div>
+                        {/* <p className="text-sm"><span className='font-medium'>Address: </span>{instructions.address}</p>
+                        <p className="text-sm"><span className='font-medium'>Plan: </span>{instructions.plan}</p> */}
+                        <p className="text-sm"><span className='font-medium'>Date: </span>{date}</p>
+                        <p className="text-sm"><span className='font-medium'>Status: </span>{status}</p>
+                    </div>
                 </div>
             </div>
         </div>

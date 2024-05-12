@@ -7,7 +7,7 @@ const BookedServices = () => {
     const { user } = useAuth();
     const [bookings, setBookings] = useState([]);
 
-    const url = `http://localhost:5000/bookinges/${user?.email}`;
+    const url = `http://localhost:5000/booked-service/${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -18,7 +18,7 @@ const BookedServices = () => {
     return (
         <div className="mt-20 grid grid-cols-1">
             {  bookings.length === 0 ? (
-                <p className="mt-20">No booked services</p>
+                <p className="mt-20 max-w-screen-lg mx-auto text-3xl">No booked services</p>
             ):
                 bookings.map(singleBooked => <SingleBookedService key={singleBooked._id} singleBooked={singleBooked}></SingleBookedService>)
             }
