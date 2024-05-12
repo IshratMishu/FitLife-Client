@@ -15,11 +15,11 @@ const UpdateService = () => {
         const service_image = form.service_image.value;
         const service_area = form.service_area.value;
         const service_description = form.service_description.value;
-        const email = user.email;
-        const name = user.displayName;
-        const image = user.photoURL;
+        const providerEmail = user.email;
+        const providerName = user.displayName;
+        const providerImage = user.photoURL;
 
-        const updatingFitness = { service_name, service_image, service_price, image, service_area, service_description, email, name };
+        const updatingFitness = { service_name, service_image, service_price, providerImage, service_area, service_description, providerEmail, providerName };
        
 
   // send data to the server
@@ -104,28 +104,28 @@ const UpdateService = () => {
                     <div className="md:flex gap-4">
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text font-bold">User Email</span>
+                                <span className="label-text font-bold">Provider Email</span>
                             </label>
                             <label className="input input-bordered flex items-center gap-2">
-                                <input type="text" name="email" className="grow" placeholder="email" defaultValue={user.email} disabled />
+                                <input type="text" name="providerEmail" className="grow" placeholder="email" defaultValue={user.email} disabled />
                             </label>
                         </div>
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text font-bold">User Name</span>
+                                <span className="label-text font-bold">Provider Name</span>
                             </label>
                             <label className="input input-bordered flex items-center gap-2">
-                                <input type="text" name="name" className="grow" placeholder="name" defaultValue={user.displayName} disabled />
+                                <input type="text" name="providerName" className="grow" placeholder="name" defaultValue={user.displayName} disabled />
                             </label>
                         </div>
                     </div>
                     {/* form row 5*/}
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text font-bold">User Photo</span>
+                            <span className="label-text font-bold">Provider Photo</span>
                         </label>
                         <label className="input input-bordered flex items-center gap-2">
-                            <input type="text" name="photo" className="grow" placeholder="your photo" defaultValue={user.photoURL} disabled />
+                            <input type="text" name="providerPhoto" className="grow" placeholder="your photo" defaultValue={user.photoURL} disabled />
                         </label>
                     </div>
                     <input type="submit" value="Update" className="bg-[#495E57] btn btn-block py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#F4CE14]" />

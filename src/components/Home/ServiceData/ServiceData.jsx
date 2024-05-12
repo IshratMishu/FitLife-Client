@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from "react";
 
 const ServiceData = ({ oneService }) => {
-    const { _id, service_image, service_name, service_description, service_price, name, image } = oneService;
+    const { _id, service_image, service_name, service_description, service_price, providerName, providerImage } = oneService;
 
     useEffect(() => {
         AOS.init();
@@ -23,8 +23,8 @@ const ServiceData = ({ oneService }) => {
                     <p className="text-sm">{service_description}</p>
                     <div className='flex items-center gap-2 mt-2'>
                         <h1 className='text-xl font-bold'>By: </h1>
-                        <img className='w-12 h-12 rounded-full' src={image} alt="" />
-                        <p>{name}</p>
+                        <img className='w-12 h-12 rounded-full' src={providerImage} alt="" />
+                        <p>{providerName}</p>
                     </div>
                     <p className='flex items-center gap-1 mt-2'><IoIosPricetags /> <span className='font-semibold'>Price:</span> {service_price}</p>
                 </div>

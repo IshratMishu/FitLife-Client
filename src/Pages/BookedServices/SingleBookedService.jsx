@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const SingleBookedService = ({singleBooked}) => {
-    const { serviceId, service_name, service_image, service_price, user_email, user_name, instructions, date, provider_name, provider_email, status } = singleBooked;
+    const { serviceId, service_name, service_image, service_price, user_email, user_name, instructions, date, providerName, providerEmail, status } = singleBooked;
 
 
     return (
@@ -14,8 +14,8 @@ const SingleBookedService = ({singleBooked}) => {
                     <h2 className="card-title">{service_name}</h2>
                     <p>{serviceId}</p>
                     <div className='flex items-center gap-2'>
-                        <p>{provider_name}</p>
-                        <p>{provider_email}</p>
+                        <p>{providerName}</p>
+                        <p>{providerEmail}</p>
                     </div>
                   <p>{service_price}</p>
                   <p>{ user_email}</p>

@@ -10,7 +10,7 @@ const BookNow = () => {
     const { user } = useAuth() || {};
     const booking = useLoaderData();
 
-    const { _id, service_name, service_image, service_price, name, email } = booking;
+    const { _id, service_name, service_image, service_price, providerName, providerEmail } = booking;
 
     const handleBooking = e => {
         e.preventDefault();
@@ -19,8 +19,8 @@ const BookNow = () => {
         const service_name = form.service_name.value;
         const service_price = form.service_price.value;
         const service_image = form.service_image.value;
-        const provider_name = form.provider_name.value;
-        const provider_email = form.provider_email.value;
+        const providerName = form.providerName.value;
+        const providerEmail = form.providerEmail.value;
         const user_email = user?.email;
         const user_name = user?.displayName;
         const date = form.date.value;
@@ -29,8 +29,7 @@ const BookNow = () => {
             plan: form.plan.value
         }
 
-        const fitnessBooking = { serviceId, service_name, service_image, service_price, user_email, user_name, instructions, date, provider_name, provider_email, status: "pending" };
-        console.log(fitnessBooking);
+        const fitnessBooking = { serviceId, service_name, service_image, service_price, user_email, user_name, instructions, date, providerName, providerEmail, status: "pending" };
 
         // send data to the server
         fetch('http://localhost:5000/bookings', {
@@ -139,7 +138,7 @@ const BookNow = () => {
                             <span className="label-text font-bold flex items-center"><GoDotFill /> Provider Name</span>
                         </label>
                         <label className="input input-bordered flex items-center gap-2">
-                            <input type="text" name="provider_name" className="grow" placeholder="provider_name" defaultValue={name} disabled />
+                            <input type="text" name="providerName" className="grow" placeholder="provider_name" defaultValue={providerName} disabled />
                         </label>
                     </div>
 
@@ -149,7 +148,7 @@ const BookNow = () => {
                             <span className="label-text font-bold flex items-center"><GoDotFill /> Provider Email</span>
                         </label>
                         <label className="input input-bordered flex items-center gap-2">
-                            <input type="text" name="provider_email" className="grow" placeholder="provider_email" defaultValue={email} disabled />
+                            <input type="text" name="providerEmail" className="grow" placeholder="provider_email" defaultValue={providerEmail} disabled />
                         </label>
                     </div>
 

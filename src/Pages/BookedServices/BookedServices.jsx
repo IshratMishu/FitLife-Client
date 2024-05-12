@@ -7,7 +7,7 @@ const BookedServices = () => {
     const { user } = useAuth();
     const [bookings, setBookings] = useState([]);
 
-    const url = `http://localhost:5000/bookings?email=${user.email}`;
+    const url = `http://localhost:5000/bookinges/${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
