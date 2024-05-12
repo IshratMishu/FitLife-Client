@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 const SingleBookedService = ({singleBooked}) => {
+
     const { serviceId, service_name, service_image, service_price, user_email, user_name, instructions, date, providerName, providerEmail, status } = singleBooked;
 
 

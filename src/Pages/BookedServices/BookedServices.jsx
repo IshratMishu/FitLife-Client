@@ -17,7 +17,9 @@ const BookedServices = () => {
 
     return (
         <div className="mt-20 grid grid-cols-1">
-            {
+            {  bookings.length === 0 ? (
+                <p className="mt-20">No booked services</p>
+            ):
                 bookings.map(singleBooked => <SingleBookedService key={singleBooked._id} singleBooked={singleBooked}></SingleBookedService>)
             }
         </div>

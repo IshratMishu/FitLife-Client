@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 import { FaChartArea } from 'react-icons/fa';
 import { IoIosPricetags } from 'react-icons/io';
 import { Link } from 'react-router-dom';
@@ -9,6 +10,9 @@ const SingleService = ({ oneService }) => {
 
     return (
         <div>
+             <Helmet>
+                <title>All Services - FlexiCare</title>
+            </Helmet>
             <div className="card md:card-side bg-base-100 shadow-xl lg:m-5 m-2">
                 <figure className="lg:p-10 p-2">
                     <img className="rounded-xl h-52" src={service_image} alt="fitness" />
