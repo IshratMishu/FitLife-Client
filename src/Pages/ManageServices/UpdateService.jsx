@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import useAuth from "../../components/Hooks/useAuth";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
+import fit from '../../assets/wer.jpg'
 
 const UpdateService = () => {
     const { user } = useAuth();
@@ -48,18 +49,18 @@ const UpdateService = () => {
     }
 
     return (
-        <div className="lg:p-24 md:p-14 p-2 space-y-10 md:mt-14 mt-32 max-w-screen-xl mx-auto" >
+        <div className="lg:p-24 p-2 space-y-5 bg-cover" style={{backgroundImage: `url(${fit})`}}>
              <Helmet>
                 <title>Update Service - FlexiCare</title>
             </Helmet>
-            <div className="shadow-md rounded-xl md:p-10 p-3" >
-                <h2 className="text-3xl font-bold text-center mb-16">Update Your Fitness & Therapeutic Services</h2>
+            <div className="shadow-md bg-[#495E57] bg-opacity-65 lg:mt-2 mt-20 rounded-xl md:p-10 p-3 max-w-screen-xl mx-auto" >
+                <h2 className="text-xl md:text-3xl font-bold text-center mb-5 md:mb-12 text-white">Effortlessly Update Your Fitness & Therapeutic Offerings</h2>
                 <form className="space-y-5" onSubmit={handleUpdate}>
                     {/* form row 1*/}
                     <div className="md:flex gap-4">
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text font-bold">Service Name</span>
+                                <span className="label-text font-bold text-white">Service Name</span>
                             </label>
                             <label className="input input-bordered flex items-center gap-2">
                                 <input type="text" name="service_name" className="grow" placeholder="service_name" defaultValue={service_name} />
@@ -67,7 +68,7 @@ const UpdateService = () => {
                         </div>
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text font-bold">Image URL</span>
+                                <span className="label-text font-bold text-white">Image URL</span>
                             </label>
                             <label className="input input-bordered flex items-center gap-2">
                                 <input type="text" name="service_image" className="grow" placeholder="image url" defaultValue={service_image} />
@@ -79,7 +80,7 @@ const UpdateService = () => {
                     <div className="md:flex gap-4">
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text font-bold"> Price</span>
+                                <span className="label-text font-bold text-white"> Price</span>
                             </label>
                             <label className="input input-bordered flex items-center gap-2">
                                 <input type="text" name="service_price" className="grow" placeholder="price" defaultValue={service_price} />
@@ -87,7 +88,7 @@ const UpdateService = () => {
                         </div>
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text font-bold">Area</span>
+                                <span className="label-text font-bold text-white">Area</span>
                             </label>
                             <label className="input input-bordered flex items-center gap-2">
                                 <input type="text" name="service_area" className="grow" placeholder="area" defaultValue={service_area} />
@@ -98,7 +99,7 @@ const UpdateService = () => {
                     {/* form row 3*/}
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text font-bold">Description</span>
+                            <span className="label-text font-bold text-white">Description</span>
                         </label>
                         <label className="input input-bordered flex items-center gap-2">
                             <input type="text" name="service_description" className="grow" placeholder="description" defaultValue={service_description} />
@@ -108,7 +109,7 @@ const UpdateService = () => {
                     <div className="md:flex gap-4">
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text font-bold">Provider Email</span>
+                                <span className="label-text font-bold text-white">Provider Email</span>
                             </label>
                             <label className="input input-bordered flex items-center gap-2">
                                 <input type="text" name="providerEmail" className="grow" placeholder="email" defaultValue={user.email} disabled />
@@ -116,7 +117,7 @@ const UpdateService = () => {
                         </div>
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text font-bold">Provider Name</span>
+                                <span className="label-text font-bold text-white">Provider Name</span>
                             </label>
                             <label className="input input-bordered flex items-center gap-2">
                                 <input type="text" name="providerName" className="grow" placeholder="name" defaultValue={user.displayName} disabled />
@@ -126,7 +127,7 @@ const UpdateService = () => {
                     {/* form row 5*/}
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text font-bold">Provider Photo</span>
+                            <span className="label-text font-bold text-white">Provider Photo</span>
                         </label>
                         <label className="input input-bordered flex items-center gap-2">
                             <input type="text" name="providerPhoto" className="grow" placeholder="your photo" defaultValue={user.photoURL} disabled />

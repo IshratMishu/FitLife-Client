@@ -11,7 +11,7 @@
 }
 
 .dropDownMenu ul {
-   background: #ffffff;
+   background: #495E57;
    list-style: none;
    border-radius: 10px;
    margin-top: 32px;
@@ -36,7 +36,7 @@ li:hover ul#submenu {
 #submenu li {
    width: 200px;
    padding: 2px;
-   color: #495E57;
+   color: white;
 }
 
 #submenu {

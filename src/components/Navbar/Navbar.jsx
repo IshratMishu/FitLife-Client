@@ -3,16 +3,18 @@ import useAuth from "../../components/Hooks/useAuth";
 import logo from '../../assets/Blue_Modern_Domain_Registrar_Business_Company_Logo-removebg-preview.png';
 import { FaChevronDown } from "react-icons/fa";
 
+
 const Navbar = () => {
     const { logOut, user } = useAuth();
 
     const linkStyle = ({ isActive }) => {
         return {
             fontWeight: isActive ? "medium" : "",
-            color: isActive ? "#F4CE14" : "#495E57",
-            background: isActive ? "#495E57" : "none",
+            color: isActive ? "#495E57" : "white",
+            background: isActive ? "#F4CE14" : "none",
             fontSize: isActive ? "" : "16px",
             padding: isActive? "10px": "",
+       
         };
     };
 
@@ -22,7 +24,7 @@ const Navbar = () => {
         <li><NavLink to='/allService' style={linkStyle}>Services</NavLink></li>
         <ul className="dropDownMenu">
             <li>
-                <p className="flex items-center">Dashboard<FaChevronDown className="text-xl text-[#495E57]"/></p>
+                <p className="flex items-center text-white">Dashboard<FaChevronDown className="text-xl text-white"/></p>
                 <ul id='submenu' className="shadow-md">
                     <li><NavLink to='/addService' style={linkStyle}>Add Service</NavLink></li>
                     <li><NavLink to='/manageService' style={linkStyle}>Manage Service</NavLink></li>
@@ -41,7 +43,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar fixed bg-base-100 left-0 top-0 z-10 p-2">
+        <div className="navbar fixed bg-[#495E57] left-0 top-0 z-10 p-2">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

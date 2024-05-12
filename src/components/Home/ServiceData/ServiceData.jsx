@@ -1,19 +1,15 @@
 import { IoIosPricetags } from "react-icons/io";
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from "react";
+
 
 const ServiceData = ({ oneService }) => {
     const { _id, service_image, service_name, service_description, service_price, providerName, providerImage } = oneService;
 
-    useEffect(() => {
-        AOS.init();
-    }, [])
 
     return (
-        <div className="shadow-md rounded-xl m-3 p-5" data-aos="flip-left">
+        <div className="shadow-md rounded-xl m-3 p-5">
             <div className="flex flex-col md:flex-row items-center gap-5">
                 <div>
                     <img className="rounded-xl h-40 object-cover" src={service_image} alt="" />

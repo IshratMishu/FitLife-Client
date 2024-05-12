@@ -7,7 +7,7 @@ const AllService = () => {
     const fitServices = useLoaderData();
 
     return (
-        <div className="mt-20 grid grid-cols-1 gap-10">
+        <div className="mt-20 grid grid-cols-1 gap-10 max-w-screen-xl mx-auto">
             {
                 fitServices.map(oneService => <SingleService key={oneService._id} oneService={oneService}></SingleService>)
             }
