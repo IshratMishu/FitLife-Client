@@ -9,6 +9,7 @@ import { FaGoogle } from "react-icons/fa";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import loginLogo from '../../assets/pexels-cliff-booth-4058411.jpg';
+import { Helmet } from "react-helmet";
 
 
 const Registration = () => {
@@ -66,6 +67,9 @@ const Registration = () => {
 
     return (
         <div className="hero min-h-screen mt-20 mb-14" style={{ backgroundImage: `url(${loginLogo})` }}>
+             <Helmet>
+                <title>Register - FlexiCare</title>
+            </Helmet>
             <div className="hero-content flex flex-col w-full bg-[#495E57] bg-opacity-55">
 
                 <h1 className="text-3xl mt-3 font-bold text-white text-center">Register for Free!</h1>

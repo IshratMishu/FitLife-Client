@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import useAuth from "../../components/Hooks/useAuth";
 import { useLoaderData } from "react-router-dom";
 import { GoDotFill } from "react-icons/go";
+import { Helmet } from "react-helmet";
 
 
 
@@ -57,6 +58,9 @@ const BookNow = () => {
 
     return (
         <div className="max-w-screen-xl mx-auto">
+             <Helmet>
+                <title>Booking Form - FlexiCare</title>
+            </Helmet>
             <div className="lg:p-24 md:p-14 p-2 space-y-10 md:mt-14 mt-32">
                 <form className="space-y-5" onSubmit={handleBooking}>
                     <div className="form-control">

@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import useAuth from "../../components/Hooks/useAuth";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const UpdateService = () => {
     const { user } = useAuth();
@@ -48,6 +49,9 @@ const UpdateService = () => {
 
     return (
         <div className="lg:p-24 md:p-14 p-2 space-y-10 md:mt-14 mt-32 max-w-screen-xl mx-auto" >
+             <Helmet>
+                <title>Update Service - FlexiCare</title>
+            </Helmet>
             <div className="shadow-md rounded-xl md:p-10 p-3" >
                 <h2 className="text-3xl font-bold text-center mb-16">Update Your Fitness & Therapeutic Services</h2>
                 <form className="space-y-5" onSubmit={handleUpdate}>

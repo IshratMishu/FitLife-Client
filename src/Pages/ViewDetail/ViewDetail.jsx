@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { IoIosPricetags } from "react-icons/io";
 import { Link, useParams } from "react-router-dom";
 
@@ -18,6 +19,9 @@ const ViewDetail = () => {
 
     return (
         <div className="mt-28">
+             <Helmet>
+                <title>Service Detail - FlexiCare</title>
+            </Helmet>
             <div className="flex gap-3 items-center ml-10">
                 <img className="w-20 h-20 rounded-full" src={fit.providerImage} alt="" />
                 <div>

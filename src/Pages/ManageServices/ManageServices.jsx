@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import useAuth from "../../components/Hooks/useAuth";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 
 const ManageServices = () => {
@@ -51,6 +52,9 @@ const ManageServices = () => {
 
     return (
         <div className="mt-20">
+             <Helmet>
+                <title>Manage Service - FlexiCare</title>
+            </Helmet>
             <h1 className="text-center font-semibold text-2xl mt-16 text-gray-700"></h1>
             <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10">
                 {items.map((adding) => (

@@ -4,12 +4,16 @@ import ServiceData from "./ServiceData/ServiceData";
 import Advantages from "../../Sections/Advantages";
 import Course from "../../Sections/Course";
 import Reviews from "../../Sections/Reviews"
+import { Helmet } from "react-helmet";
 
 const Home = () => {
     const fitServices = useLoaderData();
 
     return (
         <div>
+             <Helmet>
+                <title>Home - FlexiCare</title>
+            </Helmet>
             <Banner></Banner>
             <div className="text-2xl font-semibold mt-20 pl-4 max-w-screen-xl mx-auto">Our Most Popular Services</div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-screen-xl mx-auto">

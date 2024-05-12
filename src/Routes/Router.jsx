@@ -12,6 +12,7 @@ import BookNow from "../Pages/BookNow/BookNow";
 import BookedServices from "../Pages/BookedServices/BookedServices";
 import ManageServices from "../Pages/ManageServices/ManageServices";
 import UpdateService from "../Pages/ManageServices/UpdateService";
+import ServiceToDo from "../Pages/ServiceToDo/ServiceToDo";
 
 
 const Router = createBrowserRouter([
@@ -55,6 +56,10 @@ const Router = createBrowserRouter([
                 path: "/updateService/:id",
                 element: <PrivateRoute><UpdateService></UpdateService></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/fitness/${params.id}`)
+            },
+            {
+                path: "/toDo",
+                element: <PrivateRoute><ServiceToDo></ServiceToDo></PrivateRoute>,
             },
             {
                 path: "/login",

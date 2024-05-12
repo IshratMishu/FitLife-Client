@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 const SingleBookedService = ({singleBooked}) => {
 
@@ -7,6 +8,9 @@ const SingleBookedService = ({singleBooked}) => {
 
     return (
         <div>
+             <Helmet>
+                <title>Booked Services - FlexiCare</title>
+            </Helmet>
             <div className="card md:card-side bg-base-100 shadow-xl lg:m-5 m-2">
                 <figure className="lg:p-10 p-2">
                     <img className="rounded-xl h-52" src={service_image} alt="fitness" />

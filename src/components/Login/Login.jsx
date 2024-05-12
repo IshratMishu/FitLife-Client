@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useAuth from "../../components/Hooks/useAuth";
 import loginLogo from '../../assets/pexels-cliff-booth-4058411.jpg';
+import { Helmet } from "react-helmet";
 
 
 const Login = () => {
@@ -60,6 +61,9 @@ const Login = () => {
 
     return (
         <div className="hero min-h-screen mt-20 mb-14" style={{ backgroundImage: `url(${loginLogo})` }}>
+             <Helmet>
+                <title>Login - FlexiCare</title>
+            </Helmet>
             <div className="hero-content w-full flex flex-col bg-[#495E57] bg-opacity-55">
                 <h1 className="text-3xl font-bold text-white text-center">Welcome Back!</h1>
                 <div className="card  bg-[#495E57] bg-opacity-40 w-full max-w-sm shadow-md shadow-gray-400">
