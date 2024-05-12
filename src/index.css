@@ -4,3 +4,49 @@
 @tailwind components;
 @tailwind utilities;
 
+.dropDownMenu ul,
+.dropDownMenu li {
+   margin: 0;
+   padding: 0;
+}
+
+.dropDownMenu ul {
+   background: #ffffff;
+   list-style: none;
+   border-radius: 10px;
+   margin-top: 32px;
+}
+
+.dropDownMenu li {
+   position: relative;
+}
+
+#submenu {
+   opacity: 0;
+   position: absolute;
+   visibility: hidden;
+   z-index: 1;
+}
+
+li:hover ul#submenu {
+   opacity: 1;
+   visibility: visible;
+}
+
+#submenu li {
+   width: 200px;
+   padding: 2px;
+   color: #495E57;
+}
+
+#submenu {
+   visibility: hidden;
+   z-index: 1;
+   padding: 5px;
+}
+
+#submenu li:hover {
+   background: #F4CE14;
+   border-radius: 5px;
+   padding: 2px;
+}
