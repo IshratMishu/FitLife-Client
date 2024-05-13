@@ -1,8 +1,17 @@
-# React + Vite
+# Website Name: FlexiCare
+**Category:** Fitness and Therapeutic Services
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Site URL:** https://service-assignment11.web.app/
 
-Currently, two official plugins are available:
+**Features and Characteristics of my
+Website:**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Firebase Authentication such as Login with Google, Github, Email/Password and easy Registration.
+
+- Service Providers can add their services, update the services and also can delete.
+  
+- Users can book any services, can see his booking service list.
+  
+- When a user books a service, the current status is pending. If the service provider updates the status to working/completed, then the pending status will change to the updated status.
+
+- Best user experience for Mobile, Desktop or Laptop view.
