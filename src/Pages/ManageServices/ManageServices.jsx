@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 import useAuth from "../../components/Hooks/useAuth";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
+import why from '../../assets/why.mp4'
 
 const ManageServices = () => {
     const { user } = useAuth() || {};
@@ -51,28 +51,52 @@ const ManageServices = () => {
 
 
     return (
-        <div className="mt-20">
-             <Helmet>
+        <div className="mt-28 max-w-screen-xl mx-auto">
+            <div className="text-center text-balance">
+                <h1 className="text-2xl font-bold mb-2">Welcome to the Service Management page</h1>
+                <p className="font-medium">You can manage all your services here. Whether you need to update details, or remove a service altogether, this is your hub for maintaining an up-to-date.</p>
+            </div>
+            <Helmet>
                 <title>Manage Service - FlexiCare</title>
             </Helmet>
-            <h1 className="text-center font-semibold text-2xl mt-16 text-gray-700"></h1>
-            <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10">
-                {items.map((adding) => (
-                    <div key={adding._id} className="card bg-base-100 shadow-lg shadow-[#81c784]">
-                        <figure><img className="w-96 h-60 p-5" src={adding.service_image} alt="fitness" /></figure>
-                        <div className="card-body">
-                            <h2><span className="font-semibold">Product Name:</span> {adding.service_name}</h2>
-                            <p><span className="font-semibold">Price:</span> {adding.service_price}</p>
-                            <p><span className="font-semibold">Area:</span> {adding.service_area}</p>
-                            <p><span className="font-semibold"></span> {adding.service_description}</p>
-                            <div className="card-actions justify-center lg:justify-end">
-                                <Link to={`/updateService/${adding._id}`}> <div className="bg-[#495E57] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#F4CE14]">Update</div></Link>
-                                <div className="bg-[#495E57] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#F4CE14]"
-                                    onClick={() => handleDelete(adding._id)}>Delete</div>
+            <div className="flex gap-5 md:mx-10">
+                <div className="relative w-1/4 mt-10 hidden lg:block">
+                    <video autoPlay loop muted className="object-cover w-full rounded-xl">
+                        <source src={why} type="video/mp4" />
+                    </video>
+                    <div className="absolute translate-y-1/2 translate-x-1/2 top-0 left-0">
+                        <h1 className="font-semibold text-white">Book any of our <br /> services and <br /> enjoy a <br /> <span className="text-lg text-[#F4CE14]">45%</span> discount!</h1>
+                        <Link to='/allService'> <button className="bg-[#F4CE14] py-1 px-2 rounded text-[#F5F7F8] font-medium text-sm hover:bg-[#495E57]">Check Now</button></Link>
+                    </div>
+                </div>
+                <div className="mt-10 grid grid-cols-1 gap-10 w-auto lg:w-3/4">
+                    {items.length === 0 ? (
+                <p className="mt-20 text-3xl text-center">You did not add any service yet!</p>
+            ) :
+                    items.map((adding) => (
+                        <div key={adding._id} className="flex gap-2 md:gap-14 shadow-md p-2">
+                            <img className="w-24 h-28 object-cover md:w-72 md:h-44 rounded-xl" src={adding.service_image} alt="fitness" />
+                            <div className="">
+                                <div className="flex md:flex-row flex-col md:gap-20 lg:gap-32">
+                                    <div>
+                                        <h2 className="text-xl font-bold">{adding.service_name}</h2>
+                                        <p><span className="font-medium">By</span> {adding.providerName}</p>
+                                    </div>
+                                    <div>
+                                        <p><span className="font-semibold">Price: </span>${adding.service_price}</p>
+                                        <p><span className="font-semibold">Area:</span> {adding.service_area}</p>
+                                    </div>
+                                </div>
+                                <p className="text-balance text-sm">{adding.service_description}</p>
+                                <div className="flex gap-2 md:gap-5 justify-end">
+                                    <Link to={`/updateService/${adding._id}`}> <div className="bg-[#495E57] text-sm md:text-base py-2 mt-2 md:mt-5 px-3 rounded text-white md:font-semibold hover:bg-[#F4CE14]">Update</div></Link>
+                                    <div className="bg-[#495E57] text-sm md:text-base py-2 mt-2 md:mt-5 px-3 rounded text-white md:font-semibold hover:bg-[#F4CE14]"
+                                        onClick={() => handleDelete(adding._id)}>Delete</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );

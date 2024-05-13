@@ -60,7 +60,7 @@ const AddService = () => {
                             <span className="label-text font-bold text-white">Service Name</span>
                         </label>
                         <label className="input input-bordered flex items-center gap-2">
-                            <input type="text" name="service_name" className="grow" placeholder="service_name" />
+                            <input type="text" name="service_name" className="grow" placeholder="service_name" required/>
                         </label>
                     </div>
                     <div className="form-control md:w-1/2">
@@ -68,7 +68,7 @@ const AddService = () => {
                             <span className="label-text font-bold text-white">Image URL</span>
                         </label>
                         <label className="input input-bordered flex items-center gap-2">
-                            <input type="text" name="service_image" className="grow" placeholder="image url" />
+                            <input type="text" name="service_image" className="grow" placeholder="image url" required/>
                         </label>
                     </div>
                 </div>
@@ -80,7 +80,7 @@ const AddService = () => {
                             <span className="label-text font-bold text-white"> Price</span>
                         </label>
                         <label className="input input-bordered flex items-center gap-2">
-                            <input type="text" name="service_price" className="grow" placeholder="price" />
+                            <input type="text" name="service_price" className="grow" placeholder="price" required/>
                         </label>
                     </div>
                     <div className="form-control md:w-1/2">
@@ -88,7 +88,7 @@ const AddService = () => {
                             <span className="label-text font-bold text-white">Area</span>
                         </label>
                         <label className="input input-bordered flex items-center gap-2">
-                            <input type="text" name="service_area" className="grow" placeholder="area" />
+                            <input type="text" name="service_area" className="grow" placeholder="area" required/>
                         </label>
                     </div>
                 </div>
@@ -99,7 +99,7 @@ const AddService = () => {
                         <span className="label-text font-bold text-white">Description</span>
                     </label>
                     <label className="input input-bordered flex items-center gap-2">
-                        <input type="text" name="service_description" className="grow" placeholder="description" />
+                        <input type="text" name="service_description" className="grow" placeholder="description" required/>
                     </label>
                 </div>
                 {/* form row 4*/}

@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import useAuth from "../../components/Hooks/useAuth";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import fit from '../../assets/error.jpg'
 
 const ServiceToDo = () => {
     const { user } = useAuth();
@@ -49,10 +49,12 @@ const ServiceToDo = () => {
             });
         }
     };
-
+   
 
     return (
-        <div className="mt-32 grid grid-cols-2 max-w-screen-xl mx-auto">
+     <div className=" bg-cover" style={{backgroundImage: `url(${fit})`}}>
+         <h1 className="text-center text-balance pt-28 text-white font-semibold text-2xl">Thank you for choosing us for your service needs!You can reflect the current status of your service here.</h1>
+           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 max-w-screen-xl mx-auto">
             <Helmet>
                 <title>Service-To-Do - FlexiCare</title>
             </Helmet>
@@ -60,8 +62,8 @@ const ServiceToDo = () => {
                 <p className="mt-20 text-3xl text-center">No services</p>
             ) : (
                 services.map(service => (
-                    <div key={service._id} className="flex justify-between items-center border m-5 p-3">
-                        <div className="space-y-2 w-2/3">
+                    <div key={service._id} className="flex flex-col md:flex-row justify-between items-center border m-5 p-3 bg-[#495E57] bg-opacity-45 shadow-sm shadow-[#F4CE14]">
+                        <div className="space-y-2 w-auto lg:w-2/3 text-white">
                             <p><span className="font-semibold">Service Name:</span>{service.service_name}</p>
                             <p><span className="font-semibold">Date:</span> {service.date}</p>
                             <p><span className="font-semibold">Price:</span> {service.service_price}</p>
@@ -73,7 +75,7 @@ const ServiceToDo = () => {
                         </div>
                         <div>
                             <label className="label">
-                                <span className="label-text font-bold">Status:</span>
+                                <span className="text-white font-bold">Status:</span>
                             </label>
                             <select
                                 className="select input input-bordered"
@@ -101,6 +103,7 @@ const ServiceToDo = () => {
                 ))
             )}
         </div>
+     </div>
     );
 };
 
