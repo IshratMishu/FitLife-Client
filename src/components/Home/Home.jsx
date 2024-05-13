@@ -15,8 +15,8 @@ const Home = () => {
                 <title>Home - FlexiCare</title>
             </Helmet>
             <Banner></Banner>
-            <div className="text-2xl font-semibold mt-20 pl-4 max-w-screen-xl mx-auto">Our Most Popular Services</div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-screen-xl mx-auto">
+            <div className="text-2xl font-semibold mt-20 pl-4 max-w-screen-lg mx-auto">Our Most Popular Services</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-screen-lg mx-auto">
                {
                fitServices.slice(0, 6).map(oneService => <ServiceData key={oneService._id} oneService={oneService}></ServiceData>)
                 }
