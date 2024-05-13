@@ -80,13 +80,19 @@ const ServiceToDo = () => {
                                 value={service.status}
                                 onChange={(e) => handleStatusChange(service._id, e.target.value)}
                             >
-                                <option className="cursor-not-allowed" value="pending" disabled={service.status === "working" || service.status === "completed"}>
+                                <option
+                                    value="pending"
+                                    disabled={service.status === "working" || service.status === "completed"}>
                                     Pending
                                 </option>
-                                <option value="working" disabled={service.status === "completed"}>
+                                <option
+                                    value="working"
+                                    disabled={service.status === "completed"}>
                                     Working
                                 </option>
-                                <option value="completed" disabled={service.status !== "working"}>
+                                <option
+                                    value="completed"
+                                    disabled={service.status !== "working"}>
                                     Completed
                                 </option>
                             </select>

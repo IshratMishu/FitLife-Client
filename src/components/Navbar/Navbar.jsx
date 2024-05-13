@@ -21,7 +21,7 @@ const Navbar = () => {
 
     const links = <>
         <li><NavLink to='/' style={linkStyle}>Home</NavLink></li>
-        <li><NavLink to='/allService' style={linkStyle}>Services</NavLink></li>
+        <li><NavLink to='/allService' style={linkStyle}>All Services</NavLink></li>
         <ul className="dropDownMenu">
             <li>
                 <p className="flex items-center text-white">Dashboard<FaChevronDown className="text-xl text-white"/></p>
@@ -38,7 +38,7 @@ const Navbar = () => {
 
     const link2 = <>
         <li><NavLink to='/' style={linkStyle}>Home</NavLink></li>
-        <li><NavLink to='/allService' style={linkStyle}>Services</NavLink></li>
+        <li><NavLink to='/allService' style={linkStyle}>All Services</NavLink></li>
     </>
 
 

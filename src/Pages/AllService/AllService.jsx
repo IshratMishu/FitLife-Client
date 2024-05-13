@@ -17,20 +17,22 @@ const AllService = () => {
     };
 
     return (
-        <div className="mt-28 grid grid-cols-1 gap-10 max-w-screen-xl mx-auto">
-            <input
-                type="text"
-                placeholder="Search services by name..."
-                value={searchText}
-                onChange={handleSearchChange}
-                className="input input-bordered border-2 border-[#F4CE14] w-96 mx-auto"
-            />
-            {/* {
-                fitServices.map(oneService => <SingleService key={oneService._id} oneService={oneService}></SingleService>)
-            } */}
-            {filteredServices.map(oneService => (
-                <SingleService key={oneService._id} oneService={oneService} />
-            ))}
+        <div className="mt-28">
+            <div className="flex justify-center">
+                <input
+                    type="text"
+                    placeholder="Search services by name..."
+                    value={searchText}
+                    onChange={handleSearchChange}
+                    className="input input-bordered border-2 border-[#F4CE14] w-72 md:w-96 shadow-md mb-3"
+                />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-screen-xl mx-auto">
+
+                {filteredServices.map(oneService => (
+                    <SingleService key={oneService._id} oneService={oneService} />
+                ))}
+            </div>
         </div>
     );
 };

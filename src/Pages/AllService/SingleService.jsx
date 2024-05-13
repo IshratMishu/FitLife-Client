@@ -9,15 +9,12 @@ const SingleService = ({ oneService }) => {
 
 
     return (
-        <div>
-             <Helmet>
+        <div className='bg-cover rounded-xl m-5' style={{ backgroundImage: `url(${service_image})` }}>
+            <Helmet>
                 <title>All Services - FlexiCare</title>
             </Helmet>
-            <div className="card md:card-side bg-base-100 shadow-xl lg:m-5 m-2">
-                <figure className="lg:p-10 p-2">
-                    <img className="rounded-xl h-52" src={service_image} alt="fitness" />
-                </figure>
-                <div className="card-body">
+            <div className="card lg:m-5 m-2">
+                <div className="card-body bg-[#495E57] bg-opacity-55 rounded-xl text-white hover:bg-[#495E57]">
                     <h2 className="card-title">{service_name}</h2>
                     <p>{service_description}</p>
                     <div className='flex items-center gap-2'>
@@ -28,7 +25,7 @@ const SingleService = ({ oneService }) => {
                     <p className='flex items-center gap-1'><FaChartArea /> <span className='font-semibold'>Area:</span> {service_area}</p>
                     <p className='flex items-center gap-1'><IoIosPricetags /> <span className='font-semibold'>Price:</span> {service_price}</p>
                     <div className="card-actions justify-end">
-                        <Link to={`/viewDetail/${_id}`}><button className="bg-[#495E57] py-2 px-3 rounded text-[#F5F7F8] font-semibold hover:bg-[#F4CE14]">View Detail</button></Link>
+                        <Link to={`/viewDetail/${_id}`}><button className="bg-[#F4CE14] py-2 px-3 rounded text-[#495E57] font-semibold hover:text-white hover:bg-[#495E57]">View Detail</button></Link>
                     </div>
                 </div>
             </div>
