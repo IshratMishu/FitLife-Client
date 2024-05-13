@@ -1,6 +1,6 @@
 import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { ImFacebook2 } from "react-icons/im";
-import logo from '../../assets/Blue_Modern_Domain_Registrar_Business_Company_Logo-removebg-preview.png'
+import logo from '../../assets/logo3.png'
 
 
 const Footer = () => {

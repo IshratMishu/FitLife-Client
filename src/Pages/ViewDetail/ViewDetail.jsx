@@ -18,7 +18,7 @@ const ViewDetail = () => {
 
 
     return (
-        <div className="mt-20">
+        <div className="mt-16 md:mt-20">
             <Helmet>
                 <title>Service Detail - FlexiCare</title>
             </Helmet>
@@ -26,7 +26,7 @@ const ViewDetail = () => {
                 <video autoPlay loop muted className="absolute object-cover w-full h-full">
                     <source src={fitImg} type="video/mp4" />
                 </video>
-                <div className="absolute flex gap-3 items-center m-16">
+                <div className="absolute flex gap-3 items-center mt-16 md:m-16">
                     <img className="w-20 h-20 rounded-full" src={fit.providerImage} alt="" />
                     <div>
                         <p><span className="font-semibold text-lg">Provider Name:</span> {fit.providerName}</p>
@@ -36,7 +36,7 @@ const ViewDetail = () => {
             </div>
 
             <div className="shadow-md rounded-xl p-5 max-w-screen-xl mx-auto">
-                <div className="flex justify-around items-center gap-5">
+                <div className="flex flex-col md:flex-row justify-around items-center gap-5">
                     <div>
                         <img className="rounded-xl h-80 object-cover" src={fit.service_image} alt="" />
                     </div>

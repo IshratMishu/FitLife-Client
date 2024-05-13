@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../components/Hooks/useAuth";
-import logo from '../../assets/Blue_Modern_Domain_Registrar_Business_Company_Logo-removebg-preview.png';
+import logo from '../../assets/logo3.png';
 import { FaChevronDown } from "react-icons/fa";
 
 
