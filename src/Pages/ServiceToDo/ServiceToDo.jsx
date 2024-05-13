@@ -66,7 +66,7 @@ const ServiceToDo = () => {
                         <div className="space-y-2 w-auto lg:w-2/3 text-white">
                             <p><span className="font-semibold">Service Name:</span>{service.service_name}</p>
                             <p><span className="font-semibold">Date:</span> {service.date}</p>
-                            <p><span className="font-semibold">Price:</span> {service.service_price}</p>
+                            <p><span className="font-semibold">Price: $</span>{service.service_price}</p>
                             <div className="border p-2">
                                 <h1 className="font-semibold">Special Instructions</h1>
                                 <p><span className="font-medium">Plan:</span> {service.instructions.address}</p>

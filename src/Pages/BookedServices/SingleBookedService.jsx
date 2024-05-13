@@ -1,44 +1,49 @@
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
+import { GoDotFill } from 'react-icons/go';
 
 
 const SingleBookedService = ({ singleBooked }) => {
 
-    const { serviceId, service_name, service_image, service_price, user_email, user_name, date, providerName, providerEmail, status } = singleBooked;
+    const { serviceId, service_name, service_price, user_email, user_name, date, providerName, providerEmail, status,instructions } = singleBooked;
 
 
     return (
-        <div className='mt-5 max-w-screen-lg mx-auto'>
+        <div className='mt-10'>
             <Helmet>
                 <title>Booked Services - FlexiCare</title>
             </Helmet>
 
-            <div className="shadow-md rounded-xl m-3 p-5">
-                <div className="flex flex-col md:flex-row items-center gap-5">
-                    <div>
-                        <img className="rounded-xl h-40 object-cover" src={service_image} alt="" />
-                    </div>
+            <div className="shadow-md rounded-xl mx-3 p-10 bg-[#495E57] bg-opacity-65 text-white shadow-[#F4CE14]">
                     <div className='space-y-2'>
-                        <p className="text-sm"><span className='font-medium'>Service-Id: </span> {serviceId}</p>
-                        <h1 className="text-sm"><span className='font-medium'>Service Name: </span>{service_name}</h1>
-                        <p className="text-sm"><span className='font-medium'>Price: </span>{service_price}</p>
-                        <div className='mt-2'>
-                            <h1 className='font-medium'>Provider Info:</h1>
+                        <p className="text-sm"><span className='font-medium text-lg'>Service-Id: </span> {serviceId}</p>
+                        <h1 className="text-sm"><span className='font-medium text-lg'>Service Name: </span>{service_name}</h1>
+                        <p className="text-sm"><span className='font-medium text-lg'>Price: $</span>{service_price}</p>
+                        <p className="text-sm"><span className='font-medium text-lg'>Date: </span>{date}</p>
+                        <div className='flex justify-between mt-2'>
+                        <div>
+                            <h1 className='font-medium text-lg'>Provider Info:</h1>
                             <p className="text-sm"><span className='font-medium'>Name: </span>{providerName}</p>
                             <p className="text-sm"><span className='font-medium'>Email: </span>{providerEmail}</p>
                         </div>
-                        
-                        <div className='mt-2'>
-                            <h1 className='font-medium'>User Info:</h1>
+                        <div>
+                            <h1 className='font-medium text-lg'>User Info:</h1>
                             <p className="text-sm"><span className='font-medium'>Name: </span>{user_name}</p>
                             <p className="text-sm"><span className='font-medium'>Email: </span>{user_email}</p>
                         </div>
-                        {/* <p className="text-sm"><span className='font-medium'>Address: </span>{instructions.address}</p>
-                        <p className="text-sm"><span className='font-medium'>Plan: </span>{instructions.plan}</p> */}
-                        <p className="text-sm"><span className='font-medium'>Date: </span>{date}</p>
-                        <p className="text-sm"><span className='font-medium'>Status: </span>{status}</p>
+                        </div>
+                       <div className='flex justify-between items-center'>
+                       <div className='mt-2'>
+                        <h1 className='font-medium text-lg'>Special Instructions:</h1>
+                        <p className="text-sm"><span className='font-medium'>Address: </span>{instructions.address}</p>
+                        <p className="text-sm"><span className='font-medium'>Customize Plan: </span>{instructions.plan}</p>
+                        </div>   
+                       <div>
+                      
+                        <p className="font-medium text-lg flex items-center gap-1"><GoDotFill className='text-[#F4CE14]'/>Status:  <span className='text-[#F4CE14] text-sm'> {status}</span></p>
+                       </div>
+                       </div>
                     </div>
-                </div>
             </div>
         </div>
     );
