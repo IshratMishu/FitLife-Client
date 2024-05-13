@@ -5,8 +5,6 @@ import { GoDotFill } from "react-icons/go";
 import { Helmet } from "react-helmet";
 
 
-
-
 const BookNow = () => {
     const { user } = useAuth() || {};
     const booking = useLoaderData();
@@ -57,11 +55,16 @@ const BookNow = () => {
 
 
     return (
-        <div className="max-w-screen-xl mx-auto">
-             <Helmet>
+        <div className="mt-24 max-w-screen-md mx-auto">
+            <Helmet>
                 <title>Booking Form - FlexiCare</title>
             </Helmet>
-            <div className="lg:p-24 md:p-14 p-2 space-y-10 md:mt-14 mt-32">
+            <div className="text-center">
+                <h1 className="text-2xl font-bold">Booking Form</h1>
+                <p className="text-sm font-medium text-balance">Booking with us is simple and easy. Just fill in the booking form below <br /> and hit the purchase button.</p>
+            </div>
+            <div className="divider w-56 mx-auto mb-2"></div>
+            <div className="md:px-10 md:py-5 p-2 space-y-10 rounded-xl m-4 bg-[#495E57] bg-opacity-85">
                 <form className="space-y-5" onSubmit={handleBooking}>
                     <div className="form-control">
                         <label className="label">
@@ -106,7 +109,7 @@ const BookNow = () => {
                             <span className="label-text font-bold flex items-center"><GoDotFill />Date</span>
                         </label>
                         <label className="input input-bordered flex items-center gap-2">
-                            <input type="date" name="date" className="grow" placeholder="date" />
+                            <input type="date" name="date" className="grow" placeholder="date" required />
                         </label>
                     </div>
 
@@ -121,7 +124,7 @@ const BookNow = () => {
                                     <span className="label-text font-bold flex items-center"><GoDotFill />Your Address</span>
                                 </label>
                                 <label className="input input-bordered flex items-center gap-2">
-                                    <input type="text" name="address" className="grow" placeholder="e.g. home address" />
+                                    <input type="text" name="address" className="grow" placeholder="e.g. home address" required />
                                 </label>
                             </div>
                             <div className="form-control md:w-1/2">
@@ -134,8 +137,6 @@ const BookNow = () => {
                             </div>
                         </div>
                     </div>
-
-
 
                     <div className="form-control">
                         <label className="label">
