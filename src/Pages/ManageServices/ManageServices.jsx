@@ -12,7 +12,7 @@ const ManageServices = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/fitnesses/${user?.email}`)
+        fetch(`https://service-assignment11-server.vercel.app/fitnesses/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setItems(data);
@@ -31,7 +31,7 @@ const ManageServices = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/delete/${_id}`, {
+                fetch(`https://service-assignment11-server.vercel.app/delete/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -71,7 +71,7 @@ const ManageServices = () => {
                 </div>
                 <div className="mt-10 grid grid-cols-1 gap-10 w-auto lg:w-3/4">
                     {items.length === 0 ? (
-                <p className="mt-20 text-3xl text-center">You did not add any service yet!</p>
+                <p className="mt-20 text-3xl text-center text-[#F4CE14]">Hmm!..You did not add any service yet!</p>
             ) :
                     items.map((adding) => (
                         <div key={adding._id} className="flex gap-2 md:gap-14 shadow-md p-2">

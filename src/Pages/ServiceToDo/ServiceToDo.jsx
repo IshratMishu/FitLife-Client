@@ -9,7 +9,7 @@ const ServiceToDo = () => {
     const { user } = useAuth();
     const [services, setServices] = useState([]);
 
-    const url = `http://localhost:5000/serveToDo/${user?.email}`;
+    const url = `https://service-assignment11-server.vercel.app/serveToDo/${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -18,7 +18,7 @@ const ServiceToDo = () => {
 
     const handleStatusChange = async (id, status) => {
         try {
-            const response = await fetch(`http://localhost:5000/workingStatus/${id}`, {
+            const response = await fetch(`https://service-assignment11-server.vercel.app/workingStatus/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'
@@ -59,7 +59,7 @@ const ServiceToDo = () => {
                 <title>Service-To-Do - FlexiCare</title>
             </Helmet>
             {services.length === 0 ? (
-                <p className="mt-20 text-3xl text-center">No services</p>
+                <p className="mt-20 text-2xl text-center p-2 text-white bg-[#F4CE14]">Looks like no one has booked your services yet!</p>
             ) : (
                 services.map(service => (
                     <div key={service._id} className="flex flex-col md:flex-row justify-between items-center border m-5 p-3 bg-[#495E57] bg-opacity-45 shadow-sm shadow-[#F4CE14]">
