@@ -66,16 +66,16 @@ const Registration = () => {
 
 
     return (
-        <div className="hero min-h-screen mt-20 mb-14" style={{ backgroundImage: `url(${loginLogo})` }}>
+        <div className="hero min-h-screen mt-16 md:mt-20" style={{ backgroundImage: `url(${loginLogo})` }}>
              <Helmet>
                 <title>Register - FlexiCare</title>
             </Helmet>
-            <div className="hero-content flex flex-col w-full bg-[#495E57] bg-opacity-55">
+            <div className="md:hero-content md:rounded-none rounded-xl w-72 md:w-full flex flex-col md:bg-[#495E57] md:bg-opacity-55 mb-10">
 
-                <h1 className="text-3xl mt-3 font-bold text-white text-center">Register for Free!</h1>
+                <h1 className="text-3xl mt-4 mb-3 font-bold md:text-white text-black text-center">Register for Free!</h1>
 
-                <div className="card w-full max-w-sm shadow-md shadow-gray-400 bg-[#495E57] bg-opacity-40">
-                    <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
+                <div className="card  bg-[#495E57] bg-opacity-40 w-72 md:w-full max-w-sm shadow-md shadow-gray-400">
+                    <form className="md:card-body p-3" onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-control">
                             <label className="label">
                                 <span className="text-white">Name</span>
@@ -122,7 +122,7 @@ const Registration = () => {
                     </form>
                 </div>
 
-                <div className="divider text-white">or</div>
+                <div className="divider text-black md:text-white">or</div>
 
                 <div className="flex items-center gap-5 justify-center border bg-[#495E57] py-2 px-3 rounded text-white font-semibold hover:bg-[#F4CE14] w-auto md:w-1/2"
                     onClick={() => handleSocialLogin(googleLogin)}>

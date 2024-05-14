@@ -26,7 +26,7 @@ const ViewDetail = () => {
                 <video autoPlay loop muted className="absolute object-cover w-full h-full">
                     <source src={fitImg} type="video/mp4" />
                 </video>
-                <div className="absolute flex gap-3 items-center mt-16 md:m-16">
+                <div className="absolute flex gap-3 items-center ml-4 mt-16 md:m-16">
                     <img className="w-20 h-20 rounded-full" src={fit.providerImage} alt="" />
                     <div>
                         <p><span className="font-semibold text-lg">Provider Name:</span> {fit.providerName}</p>

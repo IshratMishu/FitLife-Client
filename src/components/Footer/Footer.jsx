@@ -1,6 +1,6 @@
 import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
-import { ImFacebook2 } from "react-icons/im";
 import logo from '../../assets/logo3.png'
+import { AiFillFacebook } from "react-icons/ai";
 
 
 const Footer = () => {
@@ -30,7 +30,7 @@ const Footer = () => {
                 <nav>
                     <h6 className="footer-title">Follow Us On</h6>
                     <div className="grid grid-flow-col gap-4">
-                        <a href="https://www.facebook.com/"> <ImFacebook2 className="h-8 w-8" /></a>
+                        <a href="https://www.facebook.com/"> <AiFillFacebook className="h-8 w-8" /></a>
                         <a href="https://www.linkedin.com/"> <FaLinkedin className="h-8 w-8" /></a>
                         <a href="https://www.instagram.com/"> <FaInstagramSquare className="h-8 w-8" /></a>
                     </div>

@@ -9,7 +9,7 @@ const SingleBookedService = ({ singleBooked }) => {
 
 
     return (
-        <div className='mt-10'>
+        <div className='mt-10 mb-14'>
             <Helmet>
                 <title>Booked Services - FlexiCare</title>
             </Helmet>

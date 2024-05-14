@@ -64,7 +64,7 @@ const BookNow = () => {
                 <p className="text-sm font-medium text-balance">Booking with us is simple and easy. Just fill in the booking form below <br /> and hit the purchase button.</p>
             </div>
             <div className="divider w-56 mx-auto mb-2"></div>
-            <div className="md:px-10 md:py-5 p-2 space-y-10 rounded-xl m-4 bg-[#495E57] bg-opacity-85">
+            <div className="md:px-10 md:py-5 p-5 space-y-10 rounded-xl m-4 bg-[#495E57] bg-opacity-85">
                 <form className="space-y-5" onSubmit={handleBooking}>
                     <div className="form-control">
                         <label className="label">

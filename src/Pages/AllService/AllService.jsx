@@ -27,7 +27,7 @@ const AllService = () => {
                     className="input input-bordered border-2 border-[#F4CE14] w-72 md:w-96 shadow-md mb-3"
                 />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-screen-xl mx-auto">
+            <div className="grid grid-cols-1 gap-5 max-w-screen-xl mx-auto">
 
                 {filteredServices.map(oneService => (
                     <SingleService key={oneService._id} oneService={oneService} />

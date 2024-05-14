@@ -60,14 +60,14 @@ const Login = () => {
 
 
     return (
-        <div className="hero min-h-screen mt-20 mb-14" style={{ backgroundImage: `url(${loginLogo})` }}>
+        <div className="hero min-h-screen mt-16 md:mt-20" style={{ backgroundImage: `url(${loginLogo})` }}>
              <Helmet>
                 <title>Login - FlexiCare</title>
             </Helmet>
-            <div className="hero-content w-full flex flex-col bg-[#495E57] bg-opacity-55">
-                <h1 className="text-3xl font-bold text-white text-center">Welcome Back!</h1>
-                <div className="card  bg-[#495E57] bg-opacity-40 w-full max-w-sm shadow-md shadow-gray-400">
-                    <form className="card-body" onSubmit={handleSubmit(onLogin)}>
+            <div className="hero-content md:rounded-none rounded-xl w-72 md:w-full flex flex-col md:bg-[#495E57] md:bg-opacity-55 mb-10">
+                <h1 className="text-3xl font-bold md:text-white text-black text-center">Welcome Back!</h1>
+                <div className="card  bg-[#495E57] bg-opacity-40 w-72 md:w-full max-w-sm shadow-md shadow-gray-400">
+                    <form className="md:card-body p-3" onSubmit={handleSubmit(onLogin)}>
                         <div className="form-control">
                             <label className="label">
                                 <span className="text-white">Email</span>
@@ -91,13 +91,13 @@ const Login = () => {
                         {
                             credentials && <small className="text-red-700">{credentials}</small>
                         }
-                        <div className="card-text">
+                        <div className="card-text mt-2 md:mt-0">
                             <p className="text-white">New here? <Link to="/registration"><button className="bg-[#495E57] md:mt-4 px-3 rounded text-white text-sm md:text-base md:font-semibold hover:bg-[#F4CE14] border">Create an Account</button></Link></p>
                         </div>
                     </form>
                 </div>
 
-                <div className="divider text-white">or</div>
+                <div className="divider text-black md:text-white">or</div>
 
                 <div className="flex items-center gap-5 justify-center border bg-[#495E57] py-2 px-3 rounded text-white font-semibold hover:bg-[#F4CE14] w-auto md:w-1/2"
                     onClick={() => handleSocialLogin(googleLogin)}>
