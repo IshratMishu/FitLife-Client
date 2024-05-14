@@ -3,6 +3,10 @@
 
 **Live Site URL:** https://service-assignment11.web.app/
 
+**I have created a simple service-sharing web application about 'Fitness and Therapeutic Services'. Where users can add ,
+update and delete his own services , watch others' services , watch service details,
+book any specific service , and update the current status of his service .**
+
 **Features and Characteristics of my
 Website:**
 
