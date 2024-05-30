@@ -12,7 +12,7 @@ const ManageServices = () => {
 
 
     useEffect(() => {
-        fetch(`https://service-assignment11-server.vercel.app/fitnesses/${user?.email}`)
+        fetch(`http://localhost:5000/fitnesses/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setItems(data);
@@ -31,7 +31,7 @@ const ManageServices = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://service-assignment11-server.vercel.app/delete/${_id}`, {
+                fetch(`http://localhost:5000/delete/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

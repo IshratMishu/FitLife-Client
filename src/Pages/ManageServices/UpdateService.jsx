@@ -25,7 +25,7 @@ const UpdateService = () => {
        
 
   // send data to the server
-  fetch(`https://service-assignment11-server.vercel.app/fitnessUpdate/${_id}`, {
+  fetch(`http://localhost:5000/fitnessUpdate/${_id}`, {
     method: 'PUT',
     headers: {
         'content-type': 'application/json'
