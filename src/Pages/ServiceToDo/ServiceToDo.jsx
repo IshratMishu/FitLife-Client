@@ -9,7 +9,7 @@ const ServiceToDo = () => {
     const { user } = useAuth();
     const [services, setServices] = useState([]);
 
-    const url = `http://localhost:5000/serveToDo/${user?.email}`;
+    const url = `https://service-assignment11-server.vercel.app/serveToDo/${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -18,7 +18,7 @@ const ServiceToDo = () => {
 
     const handleStatusChange = async (id, status) => {
         try {
-            const response = await fetch(`http://localhost:5000/workingStatus/${id}`, {
+            const response = await fetch(`https://service-assignment11-server.vercel.app/workingStatus/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'

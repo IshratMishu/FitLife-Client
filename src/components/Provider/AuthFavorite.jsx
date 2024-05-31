@@ -17,30 +17,54 @@ export const FavoritesProvider = ({ children }) => {
     if (user) {
       // Fetch the user's favorite services when the component mounts
       const fetchFavorites = async () => {
-        const response = await fetch(`/favorites/${user.uid}`);
-        const data = await response.json();
-        setFavorites(data);
+        try {
+          const response = await fetch(`https://service-assignment11-server.vercel.app/favorites/${user.uid}`);
+          if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`Failed to fetch favorites: ${errorText}`);
+          }
+          const data = await response.json();
+          setFavorites(data);
+        } catch (error) {
+          console.error('Error fetching favorites:', error.message);
+        }
       };
       fetchFavorites();
     }
   }, [user]);
 
   const addFavorite = async (serviceId) => {
-    await fetch('/favorites', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId: user.uid, serviceId })
-    });
-    setFavorites(prev => [...prev, { _id: serviceId }]);
+    try {
+      const response = await fetch('https://service-assignment11-server.vercel.app/favorites', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId: user.uid, serviceId })
+      });
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Failed to add favorite: ${errorText}`);
+      }
+      setFavorites(prev => [...prev, { _id: serviceId }]);
+    } catch (error) {
+      console.error('Error adding favorite:', error.message);
+    }
   };
 
   const removeFavorite = async (serviceId) => {
-    await fetch('/favorites', {
-      method: 'DELETE',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId: user.uid, serviceId })
-    });
-    setFavorites(prev => prev.filter(fav => fav._id !== serviceId));
+    try {
+      const response = await fetch('https://service-assignment11-server.vercel.app/favorites', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId: user.uid, serviceId })
+      });
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Failed to remove favorite: ${errorText}`);
+      }
+      setFavorites(prev => prev.filter(fav => fav._id !== serviceId));
+    } catch (error) {
+      console.error('Error removing favorite:', error.message);
+    }
   };
 
   return (
@@ -49,6 +73,9 @@ export const FavoritesProvider = ({ children }) => {
     </FavoritesContext.Provider>
   );
 };
+
 FavoritesProvider.propTypes = {
-    children: PropTypes.node
-}
+  children: PropTypes.node.isRequired,
+};
+
+export default FavoritesProvider;

@@ -25,12 +25,12 @@ const Router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/fitness')
+                loader: () => fetch('https://service-assignment11-server.vercel.app/fitness')
             },
             {
                 path: "/allService",
                 element: <AllService></AllService>,
-                loader: () => fetch('http://localhost:5000/fitness')
+                loader: () => fetch('https://service-assignment11-server.vercel.app/fitness')
             },
             {
                 path: "/viewDetail/:id",
@@ -43,7 +43,7 @@ const Router = createBrowserRouter([
             {
                 path: "/bookNow/:id",
                 element: <PrivateRoute><BookNow></BookNow></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/fitness/${params.id}`)
+                loader: ({params}) => fetch(`https://service-assignment11-server.vercel.app/fitness/${params.id}`)
             },
             {
                 path: "/bookedService",
@@ -56,7 +56,7 @@ const Router = createBrowserRouter([
             {
                 path: "/updateService/:id",
                 element: <PrivateRoute><UpdateService></UpdateService></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/fitness/${params.id}`)
+                loader: ({params}) => fetch(`https://service-assignment11-server.vercel.app/fitness/${params.id}`)
             },
             {
                 path: "/toDo",

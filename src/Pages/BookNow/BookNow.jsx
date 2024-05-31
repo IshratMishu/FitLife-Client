@@ -31,7 +31,7 @@ const BookNow = () => {
         const fitnessBooking = { serviceId, service_name, service_image, service_price, user_email, user_name, instructions, date, providerName, providerEmail, status: "pending" };
 
         // send data to the server
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://service-assignment11-server.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
