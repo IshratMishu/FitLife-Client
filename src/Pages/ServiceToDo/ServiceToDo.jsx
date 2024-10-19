@@ -56,7 +56,7 @@ const ServiceToDo = () => {
          <h1 className="text-center text-balance pt-28 text-white font-semibold text-2xl">Thank you for choosing us for your service needs!You can reflect the current status of your service here.</h1>
            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 max-w-screen-xl mx-auto">
             <Helmet>
-                <title>Service-To-Do - FlexiCare</title>
+                <title>Service-To-Do - FitLife</title>
             </Helmet>
             {services.length === 0 ? (
                 <p className="mt-20 text-2xl text-center p-2 text-white bg-[#F4CE14]">Looks like no one has booked your services yet!</p>

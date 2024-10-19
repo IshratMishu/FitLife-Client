@@ -20,7 +20,7 @@ const ViewDetail = () => {
     return (
         <div className="mt-16 md:mt-20">
             <Helmet>
-                <title>Service Detail - FlexiCare</title>
+                <title>Service Detail - FitLife</title>
             </Helmet>
             <div className="relative h-72 text-white max-w-screen-2xl mx-auto">
                 <video autoPlay loop muted className="absolute object-cover w-full h-full">

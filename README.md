@@ -1,4 +1,4 @@
-# Website Name: FlexiCare
+# Website Name: FitLife
 **Category:** Fitness and Therapeutic Services
 
 **Live Site URL:** https://service-assignment11.web.app/

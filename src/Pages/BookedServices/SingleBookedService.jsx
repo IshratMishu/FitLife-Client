@@ -11,7 +11,7 @@ const SingleBookedService = ({ singleBooked }) => {
     return (
         <div className='mt-10 mb-14'>
             <Helmet>
-                <title>Booked Services - FlexiCare</title>
+                <title>Booked Services - FitLife</title>
             </Helmet>
 
             <div className="shadow-md rounded-xl mx-3 p-10 bg-[#495E57] bg-opacity-65 text-white shadow-[#F4CE14]">

@@ -57,7 +57,7 @@ const BookNow = () => {
     return (
         <div className="mt-24 max-w-screen-md mx-auto">
             <Helmet>
-                <title>Booking Form - FlexiCare</title>
+                <title>Booking Form - FitLife</title>
             </Helmet>
             <div className="text-center">
                 <h1 className="text-2xl font-bold">Booking Form</h1>

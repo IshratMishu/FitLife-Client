@@ -1,5 +1,5 @@
 import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
-import logo from '../../assets/logo3.png'
+import logo from '../../assets/log.png'
 import { AiFillFacebook } from "react-icons/ai";
 
 

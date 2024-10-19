@@ -57,7 +57,7 @@ const ManageServices = () => {
                 <p className="font-medium">You can manage all your services here. Whether you need to update details, or remove a service altogether, this is your hub for maintaining an up-to-date.</p>
             </div>
             <Helmet>
-                <title>Manage Service - FlexiCare</title>
+                <title>Manage Service - FitLife</title>
             </Helmet>
             <div className="flex gap-5 md:mx-10">
                 <div className="relative w-1/4 mt-10 hidden lg:block">

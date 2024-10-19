@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <div>
              <Helmet>
-                <title>Home - FlexiCare</title>
+                <title>Home - FitLife</title>
             </Helmet>
             <Banner></Banner>
             <div className="text-2xl font-semibold mt-20 pl-4 max-w-screen-lg mx-auto">Our Most Popular Services</div>

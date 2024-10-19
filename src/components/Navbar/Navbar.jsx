@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../components/Hooks/useAuth";
-import logo from '../../assets/logo3.png';
+import logo from '../../assets/log.png';
 import { FaChevronDown } from "react-icons/fa";
 
 

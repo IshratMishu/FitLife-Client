@@ -51,7 +51,7 @@ const UpdateService = () => {
     return (
         <div className="lg:p-24 p-2 space-y-5 bg-cover" style={{backgroundImage: `url(${fit})`}}>
              <Helmet>
-                <title>Update Service - FlexiCare</title>
+                <title>Update Service - FitLife</title>
             </Helmet>
             <div className="shadow-md bg-[#495E57] bg-opacity-65 lg:mt-2 mt-20 rounded-xl md:p-10 p-3 max-w-screen-xl mx-auto" >
                 <h2 className="text-xl md:text-3xl font-bold text-center mb-5 md:mb-12 text-white">Effortlessly Update Your Fitness & Therapeutic Offerings</h2>

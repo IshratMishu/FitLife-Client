@@ -6,7 +6,7 @@ const ErrorPage = () => {
     return (
         <div className="min-h-screen bg-cover" style={{backgroundImage: `url(${error})`}}>
              <Helmet>
-                <title>404! Error - FlexiCare</title>
+                <title>404! Error - FitLife</title>
             </Helmet>
             <div className="font-poppins text-center space-y-5">
             <h2 className="font-bold text-white text-6xl pt-28">WHOOPS!</h2>

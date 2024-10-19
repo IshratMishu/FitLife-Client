@@ -62,7 +62,7 @@ const Login = () => {
     return (
         <div className="hero min-h-screen mt-16 md:mt-20" style={{ backgroundImage: `url(${loginLogo})` }}>
              <Helmet>
-                <title>Login - FlexiCare</title>
+                <title>Login - FitLife</title>
             </Helmet>
             <div className="hero-content md:rounded-none rounded-xl w-72 md:w-full flex flex-col md:bg-[#495E57] md:bg-opacity-55 mb-10">
                 <h1 className="text-3xl font-bold md:text-white text-black text-center">Welcome Back!</h1>

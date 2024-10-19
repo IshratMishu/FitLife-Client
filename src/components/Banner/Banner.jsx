@@ -14,7 +14,7 @@ const Banner = () => {
                     <p className="text-[20px] lg:text-[40px] md:text-[32px] font-bold text-center">
                         Your Journey to Optimal <br /> Health Starts Here
                     </p>
-                    <p className="text-sm text-balance text-center"> At FlexiCare, we are dedicated to guiding you towards optimal health, one step at a time. Whether you are aiming to sculpt your physique, boost your endurance or find balance in your mind and body.</p>
+                    <p className="text-sm text-balance text-center"> At FitLife, we are dedicated to guiding you towards optimal health, one step at a time. Whether you are aiming to sculpt your physique, boost your endurance or find balance in your mind and body.</p>
                     <div className="flex justify-center">
                         <Link to='/allServices'><button className="bg-[#495E57] py-2 mt-5 px-3 rounded text-[#F5F7F8] font-semibold hover:bg-[#F4CE14]">Transform Today</button></Link>
                     </div>

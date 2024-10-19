@@ -11,7 +11,7 @@
 //     return (
 //         <div className='m-5'>
 //             <Helmet>
-//                 <title>All Services - FlexiCare</title>
+//                 <title>All Services - FitLife</title>
 //             </Helmet>
 //             <div className="flex bg-[#495E57] text-white shadow-md shadow-[#F4CE14] justify-between rounded-xl p-4 lg:px-20 md:px-10 md:py-5 hover:bg-white hover:text-black ">
 //                 <div className="rounded-xl space-y-2">
@@ -74,7 +74,7 @@ const SingleService = ({ oneService }) => {
   return (
     <div className='m-5'>
       <Helmet>
-        <title>All Services - FlexiCare</title>
+        <title>All Services - FitLife</title>
       </Helmet>
       <div className="flex bg-[#495E57] text-white shadow-md shadow-[#F4CE14] justify-between rounded-xl p-4 lg:px-20 md:px-10 md:py-5 hover:bg-white hover:text-black">
         <div className="rounded-xl space-y-2">
