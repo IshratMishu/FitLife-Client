@@ -21,4 +21,4 @@ Website:**
 - Best user experience for Mobile, Desktop or Laptop view.
 
 ___
-**Server Side:** https://github.com/IshratMishu/FlexiCare-Server
+**Server Side:** https://github.com/IshratMishu/FitLife-Server
