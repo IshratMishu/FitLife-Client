@@ -13,7 +13,8 @@ import BookedServices from "../Pages/BookedServices/BookedServices";
 import ManageServices from "../Pages/ManageServices/ManageServices";
 import UpdateService from "../Pages/ManageServices/UpdateService";
 import ServiceToDo from "../Pages/ServiceToDo/ServiceToDo";
-import FavoritesPage from "../components/FavoritesContext/FavoritesPage";
+import EditProfile from "../components/EditProfile/EditProfile";
+import About from "../components/About/About";
 
 
 const Router = createBrowserRouter([
@@ -63,8 +64,8 @@ const Router = createBrowserRouter([
                 element: <PrivateRoute><ServiceToDo></ServiceToDo></PrivateRoute>,
             },
             {
-                path: "/favorites",
-                element: <PrivateRoute><FavoritesPage></FavoritesPage></PrivateRoute>,
+                path: "/editProfile",
+                element: <PrivateRoute><EditProfile></EditProfile></PrivateRoute>,
             },
             {
                 path: "/login",
@@ -73,6 +74,10 @@ const Router = createBrowserRouter([
             {
                 path: "/registration",
                 element: <Registration></Registration>,
+            },
+            {
+                path: "/about",
+                element: <About></About>
             },
         ],
     },

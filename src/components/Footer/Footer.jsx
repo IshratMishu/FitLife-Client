@@ -5,7 +5,7 @@ import { AiFillFacebook } from "react-icons/ai";
 
 const Footer = () => {
     return (
-        <footer className="p-10 text-base-content font-poppins mt-28 border-t">
+        <footer className="p-10 text-[#F5F7F8] font-poppins mt-28 border-t bg-[#495E57]">
             <div className="footer md:flex md:justify-between max-w-6xl mx-auto">
                 <aside>
                     <img className="h-16" src={logo} alt="" />
@@ -26,7 +26,7 @@ const Footer = () => {
                     <a className="link link-hover">Press kit</a>
                 </nav>
             </div>
-            <footer className="footer footer-center px-10 py-4 mt-5 text-base-content">
+            <footer className="footer footer-center px-10 py-4 mt-5 text-[#F5F7F8]">
                 <nav>
                     <h6 className="footer-title">Follow Us On</h6>
                     <div className="grid grid-flow-col gap-4">

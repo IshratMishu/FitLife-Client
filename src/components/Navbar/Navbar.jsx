@@ -10,36 +10,37 @@ const Navbar = () => {
     const linkStyle = ({ isActive }) => {
         return {
             fontWeight: isActive ? "medium" : "",
-            color: isActive ? "#495E57" : "white",
-            background: isActive ? "#F4CE14" : "none",
+            color: isActive ? "white" : "white",
+            background: isActive ? "none" : "none",
             fontSize: isActive ? "" : "16px",
-            padding: isActive? "10px": "",
-       
+            padding: isActive ? "10px" : "",
+            borderBottom: isActive ? "2px solid #F4CE14" : ""
         };
     };
 
 
     const links = <>
-        <li><NavLink to='/' style={linkStyle}>Home</NavLink></li>
-        <li><NavLink to='/allService' style={linkStyle}>All Services</NavLink></li>
+        <li><NavLink to='/' style={linkStyle} className='hover:border-b-2 hover:border-[#F4CE14]'>Home</NavLink></li>
+        <li><NavLink to='/allService' style={linkStyle} className='hover:border-b-2 hover:border-[#F4CE14]'>Services</NavLink></li>
         <ul className="dropDownMenu">
             <li>
-                <p className="flex items-center text-white">Dashboard<FaChevronDown className="text-xl text-white"/></p>
+                <p className="flex items-center text-white">Dashboard<FaChevronDown className="text-xl text-white" /></p>
                 <ul id='submenu' className="shadow-md">
-                    <li><NavLink to='/addService' style={linkStyle}>Add Service</NavLink></li>
-                    <li><NavLink to='/manageService' style={linkStyle}>Manage Service</NavLink></li>
-                    <li><NavLink to='/bookedService' style={linkStyle}>Booked-Services</NavLink></li>
-                    <li><NavLink to='/toDo' style={linkStyle}>Service-To-Do</NavLink></li>
-                    <li><NavLink to='/favorites' style={linkStyle}>Favorite Services</NavLink></li>
+                    <li><NavLink to='/addService' style={linkStyle} className='hover:border-b-2 hover:border-[#F4CE14]'>Add Service</NavLink></li>
+                    <li><NavLink to='/manageService' style={linkStyle} className='hover:border-b-2 hover:border-[#F4CE14]'>Manage Service</NavLink></li>
+                    <li><NavLink to='/bookedService' style={linkStyle} className='hover:border-b-2 hover:border-[#F4CE14]'>Booked-Services</NavLink></li>
+                    <li><NavLink to='/toDo' style={linkStyle} className='hover:border-b-2 hover:border-[#F4CE14]'>Service-To-Do</NavLink></li>
                 </ul>
             </li>
         </ul>
+        <li><NavLink to='/about' style={linkStyle} className='hover:border-b-2 hover:border-[#F4CE14]'>About</NavLink></li>
 
     </>
 
     const link2 = <>
-        <li><NavLink to='/' style={linkStyle}>Home</NavLink></li>
-        <li><NavLink to='/allService' style={linkStyle}>All Services</NavLink></li>
+        <li><NavLink to='/' style={linkStyle} className='hover:border-b-2 hover:border-[#F4CE14]'>Home</NavLink></li>
+        <li><NavLink to='/allService' style={linkStyle} className='hover:border-b-2 hover:border-[#F4CE14]'>Services</NavLink></li>
+        <li><NavLink to='/about' style={linkStyle} className='hover:border-b-2 hover:border-[#F4CE14]'>About</NavLink></li>
     </>
 
 
@@ -89,15 +90,16 @@ const Navbar = () => {
                                     <img alt="Tailwind CSS Navbar component" src={user?.photoURL ? user.photoURL : 'https://i.ibb.co/31dsFpW/icon-7797704-640.webp'} />
                                 </div>
                             </div>
-                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ">
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#495E57] rounded w-52 text-white">
                                 <li>
-                                    <a className="justify-between">{user?.displayName || 'User Name'}</a>
+                                    <a className="justify-between hover:border-b-2 hover:border-[#F4CE14]">{user?.displayName || 'User Name'}</a>
                                 </li>
-                                <li><a onClick={logOut}>Logout</a></li>
+                                <li> <Link to='/editProfile' className='hover:border-b-2 hover:border-[#F4CE14]'>Edit Profile</Link> </li>
+                                <li><a onClick={logOut} className='hover:border-b-2 hover:border-[#F4CE14]'>Logout</a></li>
                             </ul>
                         </div>
                         :
-                        <Link to="/login"><button className="bg-[#495E57] py-2 px-3 rounded text-[#F5F7F8] font-semibold hover:bg-[#F4CE14]">Login</button></Link>
+                        <Link to="/login"><button className="hover:bg-[#495E57] py-1 px-3 rounded text-[#F5F7F8] font-semibold bg-[#F4CE14] border border-[#F4CE14]">Login</button></Link>
                 }
             </div >
         </div >

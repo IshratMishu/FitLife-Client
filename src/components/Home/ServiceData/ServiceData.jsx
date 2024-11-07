@@ -9,7 +9,7 @@ const ServiceData = ({ oneService }) => {
 
 
     return (
-        <div className="shadow-md rounded-xl m-3 p-5 hover:bg-[#495E57] hover:text-white">
+        <div className="shadow-md rounded-xl m-3 p-5">
             <div className="flex flex-col md:flex-row items-center gap-5">
                 <div>
                     <img className="rounded-xl h-40 object-cover" src={service_image} alt="" />
@@ -26,7 +26,7 @@ const ServiceData = ({ oneService }) => {
                 </div>
             </div>
             <div className="flex justify-end">
-                <Link to={`/viewDetail/${_id}`}><button className="bg-[#495E57] shadow-md shadow-[#F4CE14] py-2 px-3 rounded hover:shadow-none text-[#F5F7F8] font-semibold hover:bg-[#F4CE14]">View Detail</button></Link>
+                <Link to={`/viewDetail/${_id}`}><button className="bg-[#495E57] py-2 px-3 rounded text-[#F5F7F8] font-semibold hover:bg-[#F4CE14]">View Detail</button></Link>
             </div>
         </div>
     );

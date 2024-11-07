@@ -64,7 +64,7 @@ const BookNow = () => {
                 <p className="text-sm font-medium text-balance">Booking with us is simple and easy. Just fill in the booking form below <br /> and hit the purchase button.</p>
             </div>
             <div className="divider w-56 mx-auto mb-2"></div>
-            <div className="md:px-10 md:py-5 p-5 space-y-10 rounded-xl m-4 bg-[#495E57] bg-opacity-85">
+            <div className="md:px-10 md:py-5 p-5 space-y-10 rounded-xl m-4 bg-[#495E57] ">
                 <form className="space-y-5" onSubmit={handleBooking}>
                     <div className="form-control">
                         <label className="label">
@@ -176,7 +176,7 @@ const BookNow = () => {
                             <input type="text" name="user_name" className="grow" placeholder="user_name" defaultValue={user?.displayName} disabled />
                         </label>
                     </div>
-                    <input type="submit" value="Purchase" className="bg-[#495E57] btn btn-block py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#F4CE14]" />
+                    <input type="submit" value="Purchase" className="hover:bg-[#495E57] btn btn-block py-2 mt-5 px-3 rounded text-white font-semibold bg-[#F4CE14]" />
                 </form>
             </div>
         </div>
