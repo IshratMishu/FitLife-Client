@@ -22,7 +22,7 @@ const AddService = () => {
         const newFitness = { service_name, service_image, service_price, providerImage, service_area, service_description, providerEmail, providerName};
 
         // send data to the server
-        fetch('https://service-assignment11-server.vercel.app/fitness', {
+        fetch('http://localhost:5000/fitness', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

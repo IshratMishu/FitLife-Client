@@ -9,24 +9,24 @@ const ServiceData = ({ oneService }) => {
 
 
     return (
-        <div className="shadow-md rounded-xl m-3 p-5">
+        <div className="shadow-md rounded m-3 px-4 py-2">
             <div className="flex flex-col md:flex-row items-center gap-5">
                 <div>
-                    <img className="rounded-xl h-40 object-cover" src={service_image} alt="" />
+                    <img className="rounded h-40 object-cover" src={service_image} alt="" />
                 </div>
-                <div>
+                <div className="space-y-2">
                     <h1 className="font-bold">{service_name}</h1>
                     <p className="text-sm">{service_description}</p>
                     <div className='flex items-center gap-2 mt-2'>
-                        <h1 className='text-xl font-bold'>By: </h1>
-                        <img className='w-12 h-12 rounded-full' src={providerImage} alt="" />
-                        <p>{providerName}</p>
+                        <h1 className='font-semibold'>By: </h1>
+                        <img className='w-10 h-10 rounded-full' src={providerImage} alt="" />
+                        <p className="text-sm">{providerName}</p>
                     </div>
                     <p className='flex items-center gap-1 mt-2'><IoIosPricetags /> <span className='font-semibold'>Price:</span> {service_price}</p>
                 </div>
             </div>
             <div className="flex justify-end">
-                <Link to={`/viewDetail/${_id}`}><button className="bg-[#495E57] py-2 px-3 rounded text-[#F5F7F8] font-semibold hover:bg-[#F4CE14]">View Detail</button></Link>
+                <Link to={`/viewDetail/${_id}`}><button className="bg-[#495E57] py-1 px-2 rounded text-[#F5F7F8] font-semibold hover:bg-[#F4CE14]">View Detail</button></Link>
             </div>
         </div>
     );

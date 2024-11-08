@@ -8,6 +8,9 @@ import { Helmet } from "react-helmet";
 import Bmi from "../../Sections/Bmi";
 import Brand from "../../Sections/Brand/Brand";
 import Blog from "../../Sections/Blog/Blog";
+import Question from "../../Sections/Question";
+
+
 
 
 const Home = () => {
@@ -19,7 +22,7 @@ const Home = () => {
                 <title>Home - FitLife</title>
             </Helmet>
             <Banner></Banner>
-            <div className="text-2xl font-semibold mt-20 pl-4 max-w-screen-lg mx-auto">Our Most Popular Services</div>
+            <div className="text-2xl font-medium mt-20 pl-4 max-w-screen-lg mx-auto">Our Most Popular Services</div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-screen-lg mx-auto">
                 {
                     fitServices.slice(0, 4).map(oneService => <ServiceData key={oneService._id} oneService={oneService}></ServiceData>)
@@ -31,6 +34,7 @@ const Home = () => {
 
             <Reviews></Reviews>
             <Bmi></Bmi>
+            <Question></Question>
             <Advantages></Advantages>
             <Course></Course>
             <Blog></Blog>

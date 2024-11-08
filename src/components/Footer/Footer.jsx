@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="footer md:flex md:justify-between max-w-6xl mx-auto">
                 <aside>
                     <img className="h-16" src={logo} alt="" />
-                    <p>Providing fitness consultations since 1992</p>
+                    <p>Providing fitness consultations since 2024</p>
                     <p>Copyright © 2024 - All right reserved</p>
                 </aside>
                 <nav>

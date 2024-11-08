@@ -9,7 +9,7 @@ const ViewDetail = () => {
     const [fit, setFit] = useState([]);
 
     useEffect(() => {
-        fetch(`https://service-assignment11-server.vercel.app/fitness/${id}`)
+        fetch(`http://localhost:5000/fitness/${id}`)
             .then(res => res.json())
             .then(data => {
                 setFit(data);

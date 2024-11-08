@@ -13,10 +13,10 @@ const Advantages = () => {
         AOS.init();
     }, [])
     return (
-        <div className="mt-20 md:mt-32 max-w-screen-xl mx-auto">
-            <h1 className="ml-5 text-2xl font-semibold text-center md:text-start">Our <span className="text-3xl">Advantages</span></h1>
+        <div className="mt-20 md:mt-32 max-w-screen-xl mx-auto lg:px-8">
+            <h1 className="ml-5 text-2xl text-center md:text-start">Our <span className="font-medium">Advantages</span></h1>
             <div className="m-5 grid grid-cols-1 md:grid-cols-3 gap-5">
-                <div className="flex items-center gap-2 border p-4 border-[#495E57] shadow-md" data-aos="flip-left">
+                <div className="flex items-center gap-2 border p-4 border-[#495E57] hover:bg-[#495E57] hover:text-white shadow-md" data-aos="flip-left">
                     <MdFitnessCenter className="w-14 h-20 rounded-2xl text-[#F4CE14]" />
                     <div>
                         <h1 className="font-bold">Personalized Fitness Plan</h1>
@@ -24,7 +24,7 @@ const Advantages = () => {
                     </div>
                 </div>
 
-                <div className="flex items-center gap-2 border p-4 border-[#495E57] shadow-md " data-aos="flip-left">
+                <div className="flex items-center gap-2 border p-4 border-[#495E57] shadow-md hover:bg-[#495E57] hover:text-white" data-aos="flip-left">
                     <FaGraduationCap className="w-14 h-20 rounded-2xl text-[#F4CE14]" />
                     <div>
                         <h1 className="font-bold">Experience Staff</h1>
@@ -32,7 +32,7 @@ const Advantages = () => {
                     </div>
                 </div>
 
-                <div className="flex items-center gap-2 border p-4  border-[#495E57] shadow-md " data-aos="flip-left">
+                <div className="flex items-center gap-2 border p-4 border-[#495E57] shadow-md hover:bg-[#495E57] hover:text-white" data-aos="flip-left">
                     <LiaNotesMedicalSolid className="w-14 h-20 rounded-2xl text-[#F4CE14]" />
                     <div >
                         <h1 className="font-bold">Therapy Goals</h1>
@@ -40,7 +40,7 @@ const Advantages = () => {
                     </div>
                 </div>
 
-                <div className="flex items-center gap-2 border p-4  border-[#495E57] shadow-md " data-aos="flip-left">
+                <div className="flex items-center gap-2 border p-4  border-[#495E57] shadow-md hover:bg-[#495E57] hover:text-white" data-aos="flip-left">
                     <RiPsychotherapyFill className="w-14 h-20 rounded-2xl text-[#F4CE14]" />
                     <div >
                         <h1 className="font-bold">Licensed Therapists</h1>
@@ -48,7 +48,7 @@ const Advantages = () => {
                     </div>
                 </div>
 
-                <div className="flex items-center gap-2 border p-4  border-[#495E57] shadow-md " data-aos="flip-left">
+                <div className="flex items-center gap-2 border p-4 border-[#495E57] shadow-md hover:bg-[#495E57] hover:text-white" data-aos="flip-left">
                     <IoFitness className="w-14 h-20 rounded-2xl text-[#F4CE14]" />
                     <div >
                         <h1 className="font-bold">Tailored Fitness Solutions</h1>
@@ -56,14 +56,13 @@ const Advantages = () => {
                     </div>
                 </div>
 
-                <div className="flex items-center gap-2 border p-4  border-[#495E57] shadow-md" data-aos="flip-left">
+                <div className="flex items-center gap-2 border p-4 border-[#495E57] shadow-md hover:bg-[#495E57] hover:text-white" data-aos="flip-left">
                     <BsBookmarkCheck className="w-14 h-20 rounded-2xl text-[#F4CE14]" />
                     <div >
                         <h1 className="font-bold">Customized Training Courses</h1>
                         <p className="text-sm">Elevate your fitness game with customized training courses</p>
                     </div>
                 </div>
-
             </div>
         </div>
     );

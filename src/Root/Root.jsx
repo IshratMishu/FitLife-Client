@@ -36,9 +36,9 @@ const Root = () => {
             ) : (
                 <div>
                     <Navbar />
-                    <ToastContainer />
-                    <ScrollRestoration />
+                    <ToastContainer />     
                     <Outlet />
+                    <ScrollRestoration />
                     <Footer />
                 </div>
             )}

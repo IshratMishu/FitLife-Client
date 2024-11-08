@@ -46,14 +46,14 @@ const Course = () => {
     };
 
     return (
-        <div className="mt-24 flex md:flex-row flex-col items-center max-w-screen-xl mx-auto md:relative">
-            <div className="lg:ml-48 md:m-4">
+        <div className="mt-24 flex md:flex-row flex-col md:gap-0 gap-5 items-center justify-center max-w-screen-xl mx-auto">
+            <div className="md:relative md:left-3">
                 <video autoPlay loop muted className="rounded-2xl" width="300" >
                     <source src={vid1} type="video/mp4" />
                 </video>
             </div>
 
-            <div className="md:absolute transform -translate-y-3 md:right-12 lg:right-72 border-4 border-[#F4CE14] md:px-10 px-2 py-4 space-y-2">
+            <div className="border-4 border-[#F4CE14] md:px-10 px-2 py-4 space-y-2 rounded md:relative md:right-3">
                 <h1 className="text-center text-xl font-semibold">Our Special Fitness Class</h1>
                 <p className="text-center">Sale of <span className="font-semibold">30%</span> for all</p>
                 <h1 className="text-center text-2xl font-bold">Deals Of The Week</h1>

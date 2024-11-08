@@ -13,6 +13,8 @@ const BookNow = () => {
 
     const handleBooking = e => {
         e.preventDefault();
+
+
         const form = e.target;
         const serviceId = form.serviceId.value;
         const service_name = form.service_name.value;
@@ -31,7 +33,7 @@ const BookNow = () => {
         const fitnessBooking = { serviceId, service_name, service_image, service_price, user_email, user_name, instructions, date, providerName, providerEmail, status: "pending" };
 
         // send data to the server
-        fetch('https://service-assignment11-server.vercel.app/bookings', {
+        fetch('http://localhost:5000/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -51,6 +53,19 @@ const BookNow = () => {
                 }
             })
         form.reset();
+    }
+
+
+    const handleNot = () => {
+        if (user?.email === providerEmail) {
+            Swal.fire({
+                title: "Error!",
+                text: "You cannot book your own service.",
+                icon: "error",
+                confirmButtonColor: "#495E57",
+                confirmButtonText: "Okay"
+            })
+        }
     }
 
 
@@ -176,7 +191,7 @@ const BookNow = () => {
                             <input type="text" name="user_name" className="grow" placeholder="user_name" defaultValue={user?.displayName} disabled />
                         </label>
                     </div>
-                    <input type="submit" value="Purchase" className="hover:bg-[#495E57] btn btn-block py-2 mt-5 px-3 rounded text-white font-semibold bg-[#F4CE14]" />
+                    <input onClick={handleNot} type="submit" value="Purchase" className="hover:bg-[#495E57] btn btn-block py-2 mt-5 px-3 rounded text-white font-semibold bg-[#F4CE14]" />
                 </form>
             </div>
         </div>
@@ -184,3 +199,4 @@ const BookNow = () => {
 };
 
 export default BookNow;
+

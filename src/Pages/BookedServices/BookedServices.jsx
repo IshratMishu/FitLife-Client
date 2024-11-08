@@ -7,7 +7,7 @@ const BookedServices = () => {
     const { user } = useAuth();
     const [bookings, setBookings] = useState([]);
 
-    const url = `https://service-assignment11-server.vercel.app/booked-service/${user?.email}`;
+    const url = `http://localhost:5000/booked-service/${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

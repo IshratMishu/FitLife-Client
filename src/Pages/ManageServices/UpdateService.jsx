@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import useAuth from "../../components/Hooks/useAuth";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
@@ -8,6 +8,7 @@ const UpdateService = () => {
     const { user } = useAuth();
     const updateFitness = useLoaderData();
     const { _id, service_name, service_image, service_price, service_area, service_description } = updateFitness;
+    const navigate = useNavigate();
 
     const handleUpdate = e => {
         e.preventDefault();
@@ -22,35 +23,36 @@ const UpdateService = () => {
         const providerImage = user.photoURL;
 
         const updatingFitness = { service_name, service_image, service_price, providerImage, service_area, service_description, providerEmail, providerName };
-       
 
-  // send data to the server
-  fetch(`https://service-assignment11-server.vercel.app/fitnessUpdate/${_id}`, {
-    method: 'PUT',
-    headers: {
-        'content-type': 'application/json'
-    },
-    body: JSON.stringify(updatingFitness)
-})
-    .then(res => res.json())
-    .then(data => {
-        if (data.modifiedCount > 0) {
-            Swal.fire({
-                title: 'Success!',
-                text: 'Your service updated successfully',
-                icon: 'success',
-                confirmButtonColor: "#495E57",
-                confirmButtonText: 'Okay'
+
+        // send data to the server
+        fetch(`http://localhost:5000/fitnessUpdate/${_id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatingFitness)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Your service updated successfully',
+                        icon: 'success',
+                        confirmButtonColor: "#495E57",
+                        confirmButtonText: 'Okay'
+                    })
+                    navigate('/manageService');
+                }
             })
-        }
-    })
 
 
     }
 
     return (
-        <div className="lg:p-24 p-2 space-y-5 bg-cover" style={{backgroundImage: `url(${fit})`}}>
-             <Helmet>
+        <div className="lg:p-24 p-2 space-y-5 bg-cover" style={{ backgroundImage: `url(${fit})` }}>
+            <Helmet>
                 <title>Update Service - FitLife</title>
             </Helmet>
             <div className="shadow-md bg-[#495E57] bg-opacity-65 lg:mt-2 mt-20 rounded-xl md:p-10 p-3 max-w-screen-xl mx-auto" >

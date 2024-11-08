@@ -5,6 +5,7 @@ import brand4 from '../../assets/brand-4.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import Marquee from "react-fast-marquee";
 
 const Brand = () => {
 
@@ -13,13 +14,17 @@ const Brand = () => {
     }, [])
 
     return (
-        <div className="mt-16 lg:mt-32 max-w-screen-xl mx-auto flex lg:flex-row flex-col items-center justify-around gap-5" data-aos="fade-up"
+        <div className="mt-16 lg:mt-32 max-w-screen-lg mx-auto flex md:flex-row flex-col items-center" data-aos="fade-up"
         data-aos-anchor-placement="top-bottom">
-            <h1 className='text-2xl'>Accepted <span className='font-medium'>Insurances</span></h1>
-            <img src={brand1} alt="company" className='w-32 h-16 border p-2 hover:border-[#F4CE14]' />
-            <img src={brand2} alt="company" className='w-32 h-16 border p-2 hover:border-[#F4CE14]' />
-            <img src={brand3} alt="company" className='w-32 h-16 border p-2 hover:border-[#F4CE14]' />
-            <img src={brand4} alt="company" className='w-32 h-16 border p-2 hover:border-[#F4CE14]' />
+            <h1 className='text-xl pl-8'>Accepted <span className='font-medium'>Insurances</span></h1>
+            <Marquee>
+            <div className="flex lg:gap-20 gap-5 mt-10 md:mt-0">
+            <img src={brand1} alt="company" className='w-32 h-16 border p-2 border-[#F4CE14]' />
+            <img src={brand2} alt="company" className='w-32 h-16 border p-2 border-[#F4CE14]' />
+            <img src={brand3} alt="company" className='w-32 h-16 border p-2 border-[#F4CE14]' />
+            <img src={brand4} alt="company" className='w-32 h-16 border p-2 border-[#F4CE14]' />
+            </div>
+            </Marquee>
         </div>
     );
 };
