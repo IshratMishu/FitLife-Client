@@ -61,7 +61,7 @@ const Login = () => {
 
     return (
         <div className="hero min-h-screen mt-16 md:mt-20" style={{ backgroundImage: `url(${loginLogo})` }}>
-             <Helmet>
+            <Helmet>
                 <title>Login - FitLife</title>
             </Helmet>
             <div className="hero-content md:rounded-none rounded-xl w-72 md:w-full flex flex-col md:bg-[#495E57] md:bg-opacity-55 mb-10">

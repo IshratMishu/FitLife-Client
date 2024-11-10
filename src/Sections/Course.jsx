@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import vid1 from "../assets/vid1.mp4"
+import useAos from "../components/Hooks/useAos";
 
 const Course = () => {
     const [days, setDays] = useState(2);
     const [hours, setHours] = useState(10);
     const [minutes, setMinutes] = useState(24);
     const [seconds, setSeconds] = useState(46);
+    useAos({ anchorPlacement: 'bottom-center' });
 
     useEffect(() => {
         // Function to update countdown values
@@ -46,7 +48,7 @@ const Course = () => {
     };
 
     return (
-        <div className="mt-24 flex md:flex-row flex-col md:gap-0 gap-5 items-center justify-center max-w-screen-xl mx-auto">
+        <div className="mt-32 flex md:flex-row flex-col md:gap-0 gap-5 items-center justify-center max-w-screen-xl mx-auto" data-aos="fade-up">
             <div className="md:relative md:left-3">
                 <video autoPlay loop muted className="rounded-2xl" width="300" >
                     <source src={vid1} type="video/mp4" />

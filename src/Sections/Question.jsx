@@ -1,19 +1,14 @@
-import { useState } from 'react';
 import ques from '../assets/g.png';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from "react";
 import CountUp from 'react-countup';
+import useAos from '../components/Hooks/useAos';
+import { useState } from 'react';
+
 
 const Question = () => {
-
-    useEffect(() => {
-        AOS.init();
-    }, [])
+    useAos({ anchorPlacement: 'top-center' });
 
     const dataArr = [{ title: 'Can I add my own services to the platform?', description: 'Yes! Registered users can add their own services by navigating to the Add Services page.' }, { title: 'How does the booking process work?', description: 'You can book any service provided by other users. Once booked, the service status will initially be Pending. If service provider update the status to Working or Completed, you can see on Booked Services page.' }, { title: 'How can I change my profile details?', description: 'To update your profile picture or name, go to the Edit Profile page, where you can make these changes quickly and easily.' }];
 
-    // toggle state and function
     const [isOpen, setIsOpen] = useState(null);
     const handleToggle = (idx) => {
         setIsOpen((prevIdx) => (prevIdx === idx ? null : idx));
@@ -21,8 +16,7 @@ const Question = () => {
 
 
     return (
-        <div className='flex lg:justify-between justify-center items-center mt-20 lg:mt-32 max-w-screen-lg mx-auto px-8' data-aos="fade-up"
-            data-aos-anchor-placement="bottom-bottom">
+        <div className='flex lg:justify-between justify-center items-center mt-80 md:mt-32 lg:mt-40 max-w-screen-lg mx-auto px-8' data-aos="fade-up">
             <div >
                 <h1 className='text-2xl mb-6 md:mb-3 text-center lg:text-start'>Frequently <span className='font-medium'> Asked <br />Questions</span></h1>
                 <div className="flex w-full justify-center">
@@ -31,7 +25,7 @@ const Question = () => {
                         {dataArr.map((data, idx) => (
                             <div key={idx} onClick={() => handleToggle(idx)} className="flex items-center">
                                 {/* the index div  */}
-                                <div className="flex size-16 select-none items-center justify-center rounded-md bg-[#495E57] text-2xl font-semibold text-white">
+                                <div className="flex size-16 select-none items-center justify-center rounded-md bg-[#495E57] text-2xl font-semibold text-white animate-pulse">
                                     <span>0{idx + 1}</span>
                                 </div>
 

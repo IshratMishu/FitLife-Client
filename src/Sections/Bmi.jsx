@@ -1,15 +1,10 @@
 import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from "react";
+import useAos from "../components/Hooks/useAos";
+
 
 const Bmi = () => {
-
-    useEffect(() => {
-        AOS.init();
-    }, [])
-
+    useAos({ anchorPlacement: 'center-bottom' });
     const [openModal, setOpenModal] = useState(false);
     const [height, setHeight] = useState("");
     const [weight, setWeight] = useState("");
@@ -24,12 +19,13 @@ const Bmi = () => {
             setBmi(bmiValue);
             setOpenModal(true);
         }
+        setHeight('');
+        setWeight('');
     };
 
     return (
-        <div className="mt-80 md:mt-32 border-y bg-[#495E57] text-[#F5F7F8]" data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom">
-            <div className="flex lg:flex-row flex-col items-center max-w-screen-lg mx-auto px-6 py-8 lg:py-0">
+        <div data-aos="fade-up">
+            <div className="flex lg:flex-row flex-col items-center mt-28 bg-[#495E57] text-[#F5F7F8] max-w-screen-lg mx-auto p-10 rounded">
                 <div className="space-y-5">
                     <h2 className="text-xl font-semibold text-center lg:text-start">Body Mass index</h2>
                     <p className="text-balance text-sm">Body Mass Index (BMI) is a measure of body fat based on height and weight that applies to adult men and women.</p>
@@ -72,8 +68,8 @@ const Bmi = () => {
             </div>
 
             {openModal && (
-                <div className="fixed inset-0 flex items-center justify-center bg-[#495E57] bg-opacity-50">
-                    <div className="bg-[#495E57] border border-[#F4CE14] px-20 py-10 rounded text-center space-y-4">
+                <div className="fixed inset-0 flex items-center justify-center">
+                    <div className="bg-[#495E57] border border-[#F4CE14] shadow-xl px-28 py-12 rounded text-center space-y-4">
                         <h2 className="text-lg font-semibold text-[#F5F7F8]">Your BMI is:</h2>
                         <p className="text-2xl font-bold text-[#F5F7F8]">{bmi}</p>
                         <button

@@ -2,18 +2,14 @@ import blog1 from '../../assets/physio_005.jpg'
 import blog2 from '../../assets/physio_003.jpg'
 import blog3 from '../../assets/physio_004.jpg'
 import { IoIosArrowForward } from "react-icons/io";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from "react";
+import useAos from '../../components/Hooks/useAos';
+
 
 const Blog = () => {
-    useEffect(() => {
-        AOS.init();
-    }, [])
+    useAos({ anchorPlacement: 'bottom-bottom' });
 
     return (
-        <div className='flex md:flex-row flex-col items-center gap-5 mt-16 lg:mt-32 max-w-screen-xl mx-auto p-8' data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom">
+        <div className='flex md:flex-row flex-col items-center gap-5 mt-16 lg:mt-32 max-w-screen-xl mx-auto p-8' data-aos="fade-up">
             <div className='space-y-4'>
                 <h2 className='text-2xl'>Latest <span className='font-medium'>News and Research</span></h2>
                 <p className='text-sm'>Find out the latest news about our Physiotherapy Clinic and information about all your Physiotherapy and health related needs.</p>

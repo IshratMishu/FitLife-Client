@@ -1,11 +1,14 @@
 import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import logo from '../../assets/log.png'
 import { AiFillFacebook } from "react-icons/ai";
+import useAos from "../Hooks/useAos";
 
 
 const Footer = () => {
+    useAos({ anchorPlacement: 'center-center' });
+
     return (
-        <footer className="p-10 text-[#F5F7F8] font-poppins mt-28 border-t bg-[#495E57]">
+        <footer className="p-10 text-[#F5F7F8] font-poppins mt-28 border-t bg-[#495E57]" data-aos="fade-up">
             <div className="footer md:flex md:justify-between max-w-6xl mx-auto">
                 <aside>
                     <img className="h-16" src={logo} alt="" />
